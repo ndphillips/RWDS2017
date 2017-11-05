@@ -236,11 +236,11 @@ knitr::include_graphics(c("images/fftrees_intro.png"))
 # 4 Steps to using FFTrees in R
 
 .pull-left15[
-<br>
+<br3><br3>
 
 
 <font size = 5>0.Install</font>
-<br>
+<br><br3>
 
 <font size = 5>1. Load</font>
 <br>
@@ -283,8 +283,7 @@ plot(heart_FFT)
 ]
 
 ---
-
-# ShinyFFTrees: http://www.shinyfftrees.org
+## ShinyFFTrees: http://www.shinyfftrees.org
 
 <iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"></iframe>
 
@@ -354,7 +353,38 @@ knitr::include_graphics("images/heart_fft_train.png")
 
 <br><br><br>
 
-<font size = 5>Aggregate classification statistics and algorithm comparison in ROC</font>
+<font size = 5>Aggregate classification statistics</font>
+
+
+]
+
+
+
+---
+count: false
+
+## plot(heart_FFT)
+
+.pull-left7[
+
+```{r, out.width = "100%"}
+knitr::include_graphics("images/heart_train_roc.png")
+```
+
+]
+
+.pull-right3[
+
+<br>
+
+<font size = 5>Algorithm comparison in ROC</font>
+
+<br><br>
+
+<font size = 5>Multiple FFTs spanning ROC space</font>
+
+<br><br><br>
+
 
 
 ]
@@ -393,10 +423,20 @@ knitr::include_graphics("images/heart_fft_test.png")
 
 ---
 
+
+<h2> &emsp; &emsp; &emsp;    &emsp;Training &emsp; &emsp;  &emsp; &emsp; &emsp;  Testing</h2>
+
+<br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics("images/train_v_test_roc.png")
+```
+
+
+---
+
 ## plot(heart_FFT, data = "test", tree = 7)
 
 .pull-left7[
-
 
 ```{r, out.width = "80%"}
 knitr::include_graphics("images/heart_fft_test_tree7.png")
@@ -416,16 +456,12 @@ knitr::include_graphics("images/heart_fft_test_tree7.png")
 
 <br><br>
 
-
 ]
-
 
 ---
 ## plot(heart_FFT, data = "test", tree = 6)
 
-
 .pull-left7[
-
 
 ```{r, out.width = "80%"}
 knitr::include_graphics("images/heart_fft_test_tree6.png")
@@ -434,7 +470,6 @@ knitr::include_graphics("images/heart_fft_test_tree6.png")
 ]
 
 .pull-right3[
-
 
 <br><br>
 
@@ -448,6 +483,24 @@ knitr::include_graphics("images/heart_fft_test_tree6.png")
 ]
 
 
+
+---
+
+
+### Additional Features
+
+---
+
+### Missing Values
+
+---
+
+### Cue costs
+
+
+---
+
+### my.tree
 
 
 ---
@@ -463,7 +516,6 @@ knitr::include_graphics("images/heart_fft_test_tree6.png")
 
 <br>
 
-
 ]
 
 .pull-right5[
@@ -473,7 +525,6 @@ knitr::include_graphics("images/cute_monster.jpg")
 ```
 
 ]
-
 
 ---
 .pull-left5[
@@ -603,6 +654,22 @@ count: false
 knitr::include_graphics("images/simulation_accuracy_6.png")
 ```
 
+
+
+---
+
+```{r, out.width = "100%"}
+knitr::include_graphics("images/simulation_accuracy_tree_1.png")
+```
+
+---
+
+```{r, out.width = "100%"}
+knitr::include_graphics("images/simulation_accuracy_tree_2.png")
+```
+
+
+
 ---
 
 .pull-left5[
@@ -631,12 +698,12 @@ count: false
 
 .pull-left5[
 
-# Make a Prediction!
+<br><br>
 
 <br>
 <br>
 
-<font size = 6>What will the median relative accuracy of FFTrees be to Random Forests?</font>
+# 98.8%
 
 ]
 
@@ -715,17 +782,9 @@ knitr::include_graphics("images/darksecretai.png")
 
 
 ---
-
-```{r, out.width = "100%", echo = FALSE}
-knitr::include_graphics("images/jaakola_1.png")
-```
+# Example of a changing environment
 
 ---
-count: false
-
-```{r, out.width = "100%", echo = FALSE}
-knitr::include_graphics("images/jaakola_2.png")
-```
 
 
 ---
@@ -757,16 +816,12 @@ count: false
 knitr::include_graphics("images/world_slowgains_3.png")
 ```
 
-
-
 ---
 count: false
-
 
 ```{r, out.width = "85%", echo = FALSE}
 knitr::include_graphics("images/world_fastgains_1.png")
 ```
-
 
 ---
 count: false
@@ -781,6 +836,24 @@ count: false
 ```{r, out.width = "85%", echo = FALSE}
 knitr::include_graphics("images/world_fastgains_3.png")
 ```
+
+
+
+---
+
+## Next steps with FFTrees
+
+### High Priority
+
+- Automate crossvalidation to optimize parameters
+- Error monitoring and error diagnosis
+- When do FFTs work well and when not?
+
+### Lower priority
+
+- Write in C++
+- Allow for > 2 classes
+
 
 
 ---
@@ -905,19 +978,6 @@ count: false
 
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/dataworld_10.png")
-```
-
-
----
-
-```{r, out.width = "100%"}
-knitr::include_graphics("images/simulation_accuracy_tree_1.png")
-```
-
----
-
-```{r, out.width = "100%"}
-knitr::include_graphics("images/simulation_accuracy_tree_2.png")
 ```
 
 

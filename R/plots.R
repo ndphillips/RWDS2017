@@ -44,6 +44,21 @@ plot(heart_FFT, data = "test")
 dev.off()
 
 
+pdf(file =  "images/heart_fft_train.pdf", width = 8, height = 7)
+
+plot(heart_FFT, data = "train")
+
+dev.off()
+
+
+pdf(file =  "images/heart_fft_test.pdf", width = 8, height = 7)
+
+plot(heart_FFT, data = "test")
+
+dev.off()
+
+
+
 png(filename = "images/heart_fft_test_tree6.png", units = "in", width = 8, height = 7, res = 400)
 
 plot(heart_FFT, data = "test", tree = 6)

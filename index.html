@@ -173,11 +173,11 @@ count: false
 # 4 Steps to using FFTrees in R
 
 .pull-left15[
-&lt;br&gt;
+&lt;br3&gt;&lt;br3&gt;
 
 
 &lt;font size = 5&gt;0.Install&lt;/font&gt;
-&lt;br&gt;
+&lt;br&gt;&lt;br3&gt;
 
 &lt;font size = 5&gt;1. Load&lt;/font&gt;
 &lt;br&gt;
@@ -221,8 +221,7 @@ plot(heart_FFT)
 ]
 
 ---
-
-# ShinyFFTrees: http://www.shinyfftrees.org
+## ShinyFFTrees: http://www.shinyfftrees.org
 
 &lt;iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"&gt;&lt;/iframe&gt;
 
@@ -288,7 +287,36 @@ count: false
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-&lt;font size = 5&gt;Aggregate classification statistics and algorithm comparison in ROC&lt;/font&gt;
+&lt;font size = 5&gt;Aggregate classification statistics&lt;/font&gt;
+
+
+]
+
+
+
+---
+count: false
+
+## plot(heart_FFT)
+
+.pull-left7[
+
+&lt;img src="images/heart_train_roc.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right3[
+
+&lt;br&gt;
+
+&lt;font size = 5&gt;Algorithm comparison in ROC&lt;/font&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;font size = 5&gt;Multiple FFTs spanning ROC space&lt;/font&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
 
 
 ]
@@ -325,10 +353,18 @@ count: false
 
 ---
 
+
+&lt;h2&gt; &amp;emsp; &amp;emsp; &amp;emsp;    &amp;emsp;Training &amp;emsp; &amp;emsp;  &amp;emsp; &amp;emsp; &amp;emsp;  Testing&lt;/h2&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;img src="images/train_v_test_roc.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
 ## plot(heart_FFT, data = "test", tree = 7)
 
 .pull-left7[
-
 
 &lt;img src="images/heart_fft_test_tree7.png" width="80%" style="display: block; margin: auto;" /&gt;
 
@@ -346,23 +382,18 @@ count: false
 
 &lt;br&gt;&lt;br&gt;
 
-
 ]
-
 
 ---
 ## plot(heart_FFT, data = "test", tree = 6)
 
-
 .pull-left7[
-
 
 &lt;img src="images/heart_fft_test_tree6.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .pull-right3[
-
 
 &lt;br&gt;&lt;br&gt;
 
@@ -376,6 +407,24 @@ count: false
 ]
 
 
+
+---
+
+
+### Additional Features
+
+---
+
+### Missing Values
+
+---
+
+### Cue costs
+
+
+---
+
+### my.tree
 
 
 ---
@@ -391,7 +440,6 @@ count: false
 
 &lt;br&gt;
 
-
 ]
 
 .pull-right5[
@@ -399,7 +447,6 @@ count: false
 &lt;img src="images/cute_monster.jpg" width="90%" style="display: block; margin: auto;" /&gt;
 
 ]
-
 
 ---
 .pull-left5[
@@ -505,6 +552,18 @@ count: false
 
 &lt;img src="images/simulation_accuracy_6.png" width="100%" style="display: block; margin: auto;" /&gt;
 
+
+
+---
+
+&lt;img src="images/simulation_accuracy_tree_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="images/simulation_accuracy_tree_2.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
 ---
 
 .pull-left5[
@@ -531,12 +590,12 @@ count: false
 
 .pull-left5[
 
-# Make a Prediction!
+&lt;br&gt;&lt;br&gt;
 
 &lt;br&gt;
 &lt;br&gt;
 
-&lt;font size = 6&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
+# 98.8%
 
 ]
 
@@ -609,13 +668,9 @@ count: false
 
 
 ---
-
-&lt;img src="images/jaakola_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+# Example of a changing environment
 
 ---
-count: false
-
-&lt;img src="images/jaakola_2.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -639,14 +694,10 @@ count: false
 
 &lt;img src="images/world_slowgains_3.png" width="85%" style="display: block; margin: auto;" /&gt;
 
-
-
 ---
 count: false
 
-
 &lt;img src="images/world_fastgains_1.png" width="85%" style="display: block; margin: auto;" /&gt;
-
 
 ---
 count: false
@@ -657,6 +708,24 @@ count: false
 count: false
 
 &lt;img src="images/world_fastgains_3.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+## Next steps with FFTrees
+
+### High Priority
+
+- Automate crossvalidation to optimize parameters
+- Error monitoring and error diagnosis
+- When do FFTs work well and when not?
+
+### Lower priority
+
+- Write in C++
+- Allow for &gt; 2 classes
+
 
 
 ---
@@ -760,15 +829,6 @@ count: false
 count: false
 
 &lt;img src="images/dataworld_10.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-
----
-
-&lt;img src="images/simulation_accuracy_tree_1.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-
-&lt;img src="images/simulation_accuracy_tree_2.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 
