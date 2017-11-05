@@ -34,14 +34,21 @@ class: title-slide-custom
 .pull-left65[
 
 <br><br><br>
-# FFTrees
 
-##A toolbox to create, visualise, and use fast-and-frugal decision trees
+## Creating transparent, powerful decision aids with FFTrees
+
 <br>
 
-### Nathaniel D. Phillips, University of Basel
+<font size = 6> Dr. Nathaniel D. Phillips</font>
+<br><br><br>
 
-Coauthors: Hansjoerg Neth, Jan Woike, Wolfgang Gaissmaier
+<font size = 5>Roche, Real World Data Science (RWDS)</font>
+<br><br>
+
+<font size = 5>13 November, 2017</font>
+
+<br><br><br><br>
+<font size = 5> Slides: <a href='http://ndphillips.github.io/RWDS2017'>http://ndphillips.github.io/RWDS2017</a></font>
 
 
 <br><br>
