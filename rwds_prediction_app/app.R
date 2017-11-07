@@ -19,39 +19,47 @@ ui <- fluidPage(
    sidebarLayout(
       sidebarPanel(
         
-        h2("How accurate will FFTrees be to Random Forests?"),
-        p("Accuracy is balanced accuracy (average of sensitivity and specificity), in prediction."),
-        p("0 = No accuracy, 100 = Equally accurate as Random Forests"),
+        p("Give your answers here!"),
          sliderInput("lowest",
-                     "In the WORST dataset for FFTrees",
+                     "In its WORST performing dataset for FFTs, I predict they they were X% as accurate as RF:",
                      min = 0,
                      max = 100,
                      value = 50),
-         
+
+        sliderInput("highest",
+                    "In the BEST performing dataset for FFTs, I predict they were X% as accurate as RF:",
+                    min = 0,
+                    max = 100,
+                    value = 50),
+        
          sliderInput("best",
-                     "On AVERAGE across all 10 datasets",
-                     min = 0,
-                     max = 100,
-                     value = 50),
-         
-         sliderInput("highest",
-                     "In the BEST dataset for FFTrees",
+                     "On AVERAGE across all 10 datasets, I predict FFTs were X% as accurate as RF:",
                      min = 0,
                      max = 100,
                      value = 50),
         
+
         
-        textInput("initials", label = "My Initials (optional)", value = ""),
         
-        actionButton("goButton", "Submit!")
+        textInput("initials", label = "Include your initials here (optional)", value = ""),
         
+        actionButton("goButton", "Submit!"),
+        h2(textOutput("finished"))
          
       ),
       
       # Show a plot of the generated distribution
       mainPanel(
-        br(), br(),
-        h2(textOutput("finished"))
+        h3("Predict the relative accuracy of fast-and-frugal trees to random forests!"),
+        p("I conducted a prediction simulation comparing the accuracy of fast-and-frugal trees (FFTs) to random forests (RF) across 10 diverse datasets taken from the UCI machine learning respository"),
+        p("In each dataset, I selected 50% of the data to train the models, and 50% to test them. I repeated this 100 times."),
+        p("For each simulation, I measured accuracy as balanced accuracy (average of sensitivity and specificity), in testing."),
+        p("I then calcualted the relative accuracy of fast-and-frugal trees to Random Forests, where:"),
+        p("0 = No accuracy"),
+        p("100 = FFTs are just as accurate as Random Forests."),
+        p("Using the sliders on the left, indicate how well you think FFTs performed relative to Random Forests across these datasets!"),
+        img(src='https://github.com/ndphillips/RWDS2017/blob/master/images/ten_datasets.png?raw=true', width = "800")
+
         
       )
    )

@@ -180,7 +180,7 @@ knitr::include_graphics(c("images/er_decision_8.png"))
 
 <br>
 <br>
-### Why are doctor's decisions so bad?
+## Why are doctor's decisions so poor?
 <br>
 
 
@@ -194,13 +194,11 @@ knitr::include_graphics(c("images/er_decision_8.png"))
 
 <br3>
 
-<font size = 5>- Extremely overconfident</font>
+<font size = 5>- Defensive decision making</font>
 
 <br3>
 
-<font size = 5>- Defensive decision making</font>
-
-
+<font size = 5>- Extreme overconfidence</font>
 ]
 
 .pull-right45[
@@ -220,18 +218,16 @@ knitr::include_graphics(c("images/overconfidence_curve.gif"))
 .pull-left5[
 
 <br><br><br><br>
-###Solution
-<font size = 5>A Fast-and-Frugal decision Tree (FFT) developed by Green & Mehr (1997)<font>
-<br4>
+##Solution
 
-### Results
+<font size = 5>A <font color = "blue">Fast-and-Frugal decision tree (FFT)</font> developed by Green & Mehr (1997)<font>
+<br>
+
+## Result
 <font size = 5>Far fewer false-alarms and huge cost savings<font>
 <br4>
 
 <font size = 5>Unlike complex rules (e.g.; regression), was readily accepted by physicians<font>
-<br4>
-
-<font size = 5>Still used at the hospital today<font>
 <br4>
 
 ]
@@ -417,17 +413,21 @@ knitr::include_graphics(c("images/terrorism_fft.png"))
 
 .pull-left5[
 <br><br>
-## How can I make an FFT?
-
+### Problem
+<br3>
 <font size = 5>No off-the-shelf method to create fast-and-frugal trees</font>
 
-## FFTrees
+### Goal
+<br3>
+<font size = 5>Create a <font color = "blue">simple tool</font> that allows anyone to create FFTs with minimal programming</font>
+<br4>
+<font size = 5>Visualise tree decisions using <font color = "blue">icon arrays</font></font>
+<br4>
+<font size = 5>Emphasize <font color = "blue">training versus prediction</font></font>
+<br4>
+<font size = 5><font color = "blue">Easily compare</font> FFTs to other algorithms.</font>
 
-<font size = 5>An extremely simple tool that allows anyone to create FFTs</font>
-<br4>
-<font size = 5>Visualise decisions using icon arrays</font>
-<br4>
-<font size = 5>Compare FFTs to other algorithms.</font>
+## FFTrees
 
 ]
 
@@ -1117,9 +1117,6 @@ knitr::include_graphics("images/cost_ignorant_fft.png")
 
 ]
 
-
-
-
 ---
 
 .pull-left3[
@@ -1156,41 +1153,55 @@ knitr::include_graphics("images/cost_minimising_fft.png")
 |     Accuracy|    81%|77%     |<font color="red">-5%</font>    |
 
 ]
+
 ---
-## Applied projects
 
-.pull-left5[
+.pull-left4[
 
-<font size = 5>Neuromuscular disorders in children</font>
+## Neuromuscular diseases in children
 
-*Which kind of neuromuscular disorder (neurogenic or myopathic) does a child have?*
+
+<b>Goal</b><br>
+Build a decision tree to aid the diagnosis of neuromuscular disorders in children
 <br3>
-Data: 146 children from the Great Ormond Street Hospitcal in London
+<b>Data</b><br>
+146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* diseases.
 <br3>
-
-FFT (see right) makes decisions after 2.1 features on average with ~ 85% accuracy
-
-<font size = 5>Psychiatric patient release</font>
-
-*Which psychiatric patients are likely to be released within 5 years?*
-<br3>
-
-Data: Histories of ~1,100 patients at psychiatric clinic in Reichenau.
-<br3>
-
-FFT (currently classified) makes decisions after ~3 features on average (social situation at time of arrest is one critical factor).
-
+<b>Result</b><br>
+FFT makes decisions after 2.1 features on average with ~ 85% accuracy
 
 ]
 
-
-
-.pull-right45[
-
-<font size=5>Neuromuscular Disorder FFT</font>
+.pull-right6[
 
 ```{r, out.width = "90%"}
 knitr::include_graphics("images/neuromuscular_fft_test.png")
+```
+
+]
+
+---
+
+.pull-left5[
+
+## Psychiatric patient release
+
+<b>Goal</b><br>
+Build a decision tree to model the likelihood that psychiatric patients will be released from treatment within 5 years.
+<br3>
+<b>Data</b><br>
+Histories of ~1,100 patients at psychiatric clinic in Reichenau characterised by ~ 40 features (demographic and behavioral)
+<br3>
+<b>Result</b><br>
+FFT (not yet public) makes decisions using ~3 features on average with performance similar to regression.
+
+]
+
+.pull-right45[
+
+<br><br>
+```{r}
+knitr::include_graphics("images/psychiatric_hospital.jpg")
 ```
 
 ]
@@ -1336,8 +1347,6 @@ count: false
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/simulation_accuracy_6.png")
 ```
-
-
 
 ---
 

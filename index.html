@@ -131,7 +131,7 @@ count: false
 
 &lt;br&gt;
 &lt;br&gt;
-### Why are doctor's decisions so bad?
+## Why are doctor's decisions so poor?
 &lt;br&gt;
 
 
@@ -145,13 +145,11 @@ count: false
 
 &lt;br3&gt;
 
-&lt;font size = 5&gt;- Extremely overconfident&lt;/font&gt;
+&lt;font size = 5&gt;- Defensive decision making&lt;/font&gt;
 
 &lt;br3&gt;
 
-&lt;font size = 5&gt;- Defensive decision making&lt;/font&gt;
-
-
+&lt;font size = 5&gt;- Extreme overconfidence&lt;/font&gt;
 ]
 
 .pull-right45[
@@ -172,18 +170,16 @@ count: false
 .pull-left5[
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-###Solution
-&lt;font size = 5&gt;A Fast-and-Frugal decision Tree (FFT) developed by Green &amp; Mehr (1997)&lt;font&gt;
-&lt;br4&gt;
+##Solution
 
-### Results
+&lt;font size = 5&gt;A &lt;font color = "blue"&gt;Fast-and-Frugal decision tree (FFT)&lt;/font&gt; developed by Green &amp; Mehr (1997)&lt;font&gt;
+&lt;br&gt;
+
+## Result
 &lt;font size = 5&gt;Far fewer false-alarms and huge cost savings&lt;font&gt;
 &lt;br4&gt;
 
 &lt;font size = 5&gt;Unlike complex rules (e.g.; regression), was readily accepted by physicians&lt;font&gt;
-&lt;br4&gt;
-
-&lt;font size = 5&gt;Still used at the hospital today&lt;font&gt;
 &lt;br4&gt;
 
 ]
@@ -349,17 +345,21 @@ count: false
 
 .pull-left5[
 &lt;br&gt;&lt;br&gt;
-## How can I make an FFT?
-
+### Problem
+&lt;br3&gt;
 &lt;font size = 5&gt;No off-the-shelf method to create fast-and-frugal trees&lt;/font&gt;
 
-## FFTrees
+### Goal
+&lt;br3&gt;
+&lt;font size = 5&gt;Create a &lt;font color = "blue"&gt;simple tool&lt;/font&gt; that allows anyone to create FFTs with minimal programming&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size = 5&gt;Visualise tree decisions using &lt;font color = "blue"&gt;icon arrays&lt;/font&gt;&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size = 5&gt;Emphasize &lt;font color = "blue"&gt;training versus prediction&lt;/font&gt;&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size = 5&gt;&lt;font color = "blue"&gt;Easily compare&lt;/font&gt; FFTs to other algorithms.&lt;/font&gt;
 
-&lt;font size = 5&gt;An extremely simple tool that allows anyone to create FFTs&lt;/font&gt;
-&lt;br4&gt;
-&lt;font size = 5&gt;Visualise decisions using icon arrays&lt;/font&gt;
-&lt;br4&gt;
-&lt;font size = 5&gt;Compare FFTs to other algorithms.&lt;/font&gt;
+## FFTrees
 
 ]
 
@@ -630,17 +630,7 @@ count: false
 &lt;br&gt;&lt;br&gt;
 ]
 
-
-
-
 ---
-# Example of a changing environment
-
-
-
-
----
-
 
 .pull-left45[
 
@@ -1025,9 +1015,6 @@ FFTrees(data = heart.train,
 
 ]
 
-
-
-
 ---
 
 .pull-left3[
@@ -1062,40 +1049,52 @@ FFTrees(data = heart.train,
 |     Accuracy|    81%|77%     |&lt;font color="red"&gt;-5%&lt;/font&gt;    |
 
 ]
+
 ---
-## Applied projects
 
-.pull-left5[
+.pull-left4[
 
-&lt;font size = 5&gt;Neuromuscular disorders in children&lt;/font&gt;
+## Neuromuscular diseases in children
 
-*Which kind of neuromuscular disorder (neurogenic or myopathic) does a child have?*
+
+&lt;b&gt;Goal&lt;/b&gt;&lt;br&gt;
+Build a decision tree to aid the diagnosis of neuromuscular disorders in children
 &lt;br3&gt;
-Data: 146 children from the Great Ormond Street Hospitcal in London
+&lt;b&gt;Data&lt;/b&gt;&lt;br&gt;
+146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* diseases.
 &lt;br3&gt;
-
-FFT (see right) makes decisions after 2.1 features on average with ~ 85% accuracy
-
-&lt;font size = 5&gt;Psychiatric patient release&lt;/font&gt;
-
-*Which psychiatric patients are likely to be released within 5 years?*
-&lt;br3&gt;
-
-Data: Histories of ~1,100 patients at psychiatric clinic in Reichenau.
-&lt;br3&gt;
-
-FFT (currently classified) makes decisions after ~3 features on average (social situation at time of arrest is one critical factor).
-
+&lt;b&gt;Result&lt;/b&gt;&lt;br&gt;
+FFT makes decisions after 2.1 features on average with ~ 85% accuracy
 
 ]
 
+.pull-right6[
 
+&lt;img src="images/neuromuscular_fft_test.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+.pull-left5[
+
+## Psychiatric patient release
+
+&lt;b&gt;Goal&lt;/b&gt;&lt;br&gt;
+Build a decision tree to model the likelihood that psychiatric patients will be released from treatment within 5 years.
+&lt;br3&gt;
+&lt;b&gt;Data&lt;/b&gt;&lt;br&gt;
+Histories of ~1,100 patients at psychiatric clinic in Reichenau characterised by ~ 40 features (demographic and behavioral)
+&lt;br3&gt;
+&lt;b&gt;Result&lt;/b&gt;&lt;br&gt;
+FFT (not yet public) makes decisions using ~3 features on average with performance similar to regression.
+
+]
 
 .pull-right45[
 
-&lt;font size=5&gt;Neuromuscular Disorder FFT&lt;/font&gt;
-
-&lt;img src="images/neuromuscular_fft_test.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src="images/psychiatric_hospital.jpg" width="1600" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -1164,29 +1163,19 @@ FFT (currently classified) makes decisions after ~3 features on average (social 
 
 &lt;font size = 6&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
 
-]
+`\(\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}\)`
 
-.pull-right5[
+1. In the *worst* performing dataset
 
-]
+2. On *average*
 
----
-
-.pull-left5[
-
-# Make a Prediction!
-
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;font size = 6&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
+3. In the *best* performing dataset
 
 ]
 
 .pull-right5[
 
-&lt;img src="images/predict_relacc_1.png" width="90%" style="display: block; margin: auto;" /&gt;
-
+&lt;iframe src="https://www.w3schools.com"&gt;&lt;/iframe&gt;
 ]
 
 ---
@@ -1230,8 +1219,6 @@ count: false
 count: false
 
 &lt;img src="images/simulation_accuracy_6.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-
 
 ---
 
@@ -1283,7 +1270,6 @@ count: false
 &lt;img src="images/predict_relacc_2.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ]
-
 
 ---
 
