@@ -503,15 +503,20 @@ count: false
 
 &lt;br&gt;
 
-&lt;font size = 5&gt;Starts with dataset description&lt;/font&gt;
+&lt;font size = 5&gt;Dataset description&lt;/font&gt;
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;font size = 5&gt;Tree &lt;b&gt;and&lt;/b&gt; step-by-step decisions applied to data&lt;/font&gt;
+&lt;font size = 5&gt;Tree and decisions displayed as &lt;b&gt;icon arrays&lt;/b&gt;*&lt;/font&gt;
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
 &lt;font size = 5&gt;Aggregate classification statistics&lt;/font&gt;
+
+
+&lt;br&gt;
+
+&lt;font size = 3&gt;* Galesic, et al. (2009). Using icon arrays to communicate medical risks&lt;/font&gt;
 
 ]
 
@@ -530,11 +535,11 @@ count: false
 
 &lt;br&gt;
 
-&lt;font size = 5&gt;Algorithm comparison in ROC&lt;/font&gt;
+&lt;font size = 5&gt;Algorithm comparison in ROC space&lt;/font&gt;
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;font size = 5&gt;Multiple FFTs spanning ROC space&lt;/font&gt;
+&lt;font size = 5&gt;Multiple FFTs with different error trade-offs.&lt;/font&gt;
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
@@ -625,10 +630,14 @@ count: false
 &lt;br&gt;&lt;br&gt;
 ]
 
----
-## ShinyFFTrees: http://www.shinyfftrees.org
 
-&lt;iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"&gt;&lt;/iframe&gt;
+
+
+---
+# Example of a changing environment
+
+
+
 
 ---
 
@@ -855,6 +864,10 @@ count: false
 ]
 
 
+---
+## ShinyFFTrees: http://www.shinyfftrees.org
+
+&lt;iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"&gt;&lt;/iframe&gt;
 
 
 ---
@@ -994,7 +1007,7 @@ FFTrees(data = heart.train,
 
 &lt;br4&gt;
 
-&lt;font size = 5&gt;3. Minimise explicit feature costs.&lt;/font&gt;
+&lt;font size = 5&gt;3. Minimise feature costs.&lt;/font&gt;
 
 ]
 
@@ -1005,7 +1018,7 @@ FFTrees(data = heart.train,
 
 &lt;img src="images/cost_ignorant_fft.png" width="80%" style="display: block; margin: auto;" /&gt;
 
-| | Ignore costs|Minimise |Change |
+| | Cost Ignorant|Cost Minimising |Change |
 |------:|:----:|:-----:|:----:|
 |     Cost / Patient|    $138|   &lt;font color = "gray"&gt;?&lt;/font&gt;   |   &lt;font color = "gray"&gt;?&lt;/font&gt; |
 |     Accuracy|    81%|   &lt;font color = "gray"&gt;?&lt;/font&gt;  | &lt;font color = "gray"&gt;?&lt;/font&gt;  |
@@ -1032,7 +1045,7 @@ FFTrees(data = heart.train,
 
 &lt;br4&gt;
 
-&lt;font size = 5&gt;3. Minimise explicit feature costs.&lt;/font&gt;
+&lt;font size = 5&gt;3. Minimise feature costs.&lt;/font&gt;
 
 ]
 
@@ -1043,7 +1056,7 @@ FFTrees(data = heart.train,
 
 &lt;img src="images/cost_minimising_fft.png" width="80%" style="display: block; margin: auto;" /&gt;
 
-| | Ignore costs|Minimise |Change |
+| | Cost Ignorant|Cost Minimising |Change |
 |------:|:----:|:-----:|:----:|
 |     Cost / Patient|    $138| $2     |&lt;font color="blue"&gt;-99%&lt;/font&gt;    |
 |     Accuracy|    81%|77%     |&lt;font color="red"&gt;-5%&lt;/font&gt;    |
@@ -1100,17 +1113,45 @@ FFT (currently classified) makes decisions after ~3 features on average (social 
 
 &lt;br&gt;&lt;br&gt;
 
-### But how well can a simple FFT actually predict data?
-
-&lt;br&gt;&lt;br&gt;
-
-### It couldn't possibly compete with the performance of a complex algorithm.
+### How well can a simple FFT actually predict data relative to a complex algorithm?
 
 ---
 
-# 10 datasets from UCI ML database,   50/50 CV,    100 Splits
+.pull-left5[
+
+## 10 datasets from UCI ML database
 
 &lt;img src="images/ten_datasets.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+&lt;br&gt;
+
+&lt;font size = 5&gt;Procedure: 100 50/50 Cross validation simulations&lt;/font&gt;
+&lt;br3&gt;
+&lt;font size = 5&gt;Criterion: Balanced Accuracy&lt;/font&gt;
+&lt;br3&gt;
+
+`\(\Large bacc = mean(sens, spec)\)`
+
+]
+
+.pull-right5[
+&lt;br&gt;&lt;br&gt;
+
+| title| cases|features |base rate |
+|------:|----:|:-----|:----|
+|     arrhythmia|    68|280     |0.29    |
+|     audiology|    226|70     |0.10    |
+|     breast|    683|10     |0.35    |
+|     cmc|    1,473|10    |0.35    |
+|     credit|    666|16     |0.45    |
+|     dermatology|   358|35     |0.31    |
+|     heart|   303     |14    |0.46
+|     occupancy|   17,895|6     |0.21    |
+|     voting|   435     |17    |0.61 |
+|     yeast|   1,484     |19    |0.16 |
+
+
+]
 
 ---
 
@@ -1243,78 +1284,30 @@ count: false
 
 ]
 
----
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-# The Dark Secret at the heart of AI and big data
-
-
 
 ---
-count: false
 
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
+.pull-left6[
 
-# The Dark Secret at the heart of AI and big data
+### What I've learned from FFTrees
 
-## What happens when things go wrong?
+- Simple models can be surprisingly effective, for both small and large datasets
+
+- People are are more likely to use decision tools that they can visualise and understand 
+
+- There is no one best model. The best model depends on the data and the needs of the decision maker.
+
+]
+
+.pull-right4[
+
+
+
+]
 
 ---
-count: false
 
 .pull-left5[
-
-]
-
-.pull-right5[
-
-&lt;br&gt;&lt;br&gt;
-&lt;img src="images/darksecretai.png" width="70%" style="display: block; margin: auto;" /&gt;
-
-]
-
-
-
----
-count: false
-
-.pull-left5[
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-&gt; &lt;font size=6&gt;[W]hat if one day [an automated car] did something unexpected—crashed into a tree, or sat at a green light? [...] The system is so complicated that even the engineers who designed it may struggle to isolate the reason for any single action.&lt;/font&gt;
-&gt; &lt;br&gt;
-&gt; &lt;br&gt;
-&gt; &lt;font size=5&gt;~ Will Knight, MIT Technology Review, April 2017&lt;/font&gt;
-
-
-]
-
-.pull-right5[
-
-&lt;br&gt;&lt;br&gt;
-&lt;img src="images/darksecretai.png" width="70%" style="display: block; margin: auto;" /&gt;
-
-]
-
-
----
-# Example of a changing environment
-
----
-
-
-### What' I've learned form FFTrees
-
-
----
 
 ## Next steps with FFTrees
 
@@ -1328,6 +1321,12 @@ count: false
 
 - Write in C++
 - Allow for &gt; 2 classes
+
+.pull-right5[
+
+
+
+]
 
 
 ---

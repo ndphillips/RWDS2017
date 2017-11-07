@@ -1,0 +1,12 @@
+name: rwds_pred
+title: rwds_pred
+username:
+account: econpsychbasel
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 232754
+bundleId: 1063341
+url: https://econpsychbasel.shinyapps.io/rwds_pred/
+when: 1510075720.79926
+asMultiple: FALSE
+asStatic: FALSE

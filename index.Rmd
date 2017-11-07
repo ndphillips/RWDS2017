@@ -576,15 +576,20 @@ knitr::include_graphics("images/heart_fft_train.png")
 
 <br>
 
-<font size = 5>Starts with dataset description</font>
+<font size = 5>Dataset description</font>
 
 <br><br>
 
-<font size = 5>Tree <b>and</b> step-by-step decisions applied to data</font>
+<font size = 5>Tree and decisions displayed as <b>icon arrays</b>*</font>
 
 <br><br><br>
 
 <font size = 5>Aggregate classification statistics</font>
+
+
+<br>
+
+<font size = 3>* Galesic, et al. (2009). Using icon arrays to communicate medical risks</font>
 
 ]
 
@@ -605,11 +610,11 @@ knitr::include_graphics("images/heart_train_roc.png")
 
 <br>
 
-<font size = 5>Algorithm comparison in ROC</font>
+<font size = 5>Algorithm comparison in ROC space</font>
 
 <br><br>
 
-<font size = 5>Multiple FFTs spanning ROC space</font>
+<font size = 5>Multiple FFTs with different error trade-offs.</font>
 
 <br><br><br>
 
@@ -709,12 +714,6 @@ knitr::include_graphics("images/heart_fft_test_tree6.png")
 ]
 
 ---
-## ShinyFFTrees: http://www.shinyfftrees.org
-
-<iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"></iframe>
-
----
-
 
 .pull-left45[
 
@@ -952,6 +951,10 @@ knitr::include_graphics("images/fft_exits_roc_C.png")
 ]
 
 
+---
+## ShinyFFTrees: http://www.shinyfftrees.org
+
+<iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"></iframe>
 
 
 ---
@@ -1094,7 +1097,7 @@ FFTrees(data = heart.train,
 
 <br4>
 
-<font size = 5>3. Minimise explicit feature costs.</font>
+<font size = 5>3. Minimise feature costs.</font>
 
 ]
 
@@ -1107,7 +1110,7 @@ FFTrees(data = heart.train,
 knitr::include_graphics("images/cost_ignorant_fft.png")
 ```
 
-| | Ignore costs|Minimise |Change |
+| | Cost Ignorant|Cost Minimising |Change |
 |------:|:----:|:-----:|:----:|
 |     Cost / Patient|    $138|   <font color = "gray">?</font>   |   <font color = "gray">?</font> |
 |     Accuracy|    81%|   <font color = "gray">?</font>  | <font color = "gray">?</font>  |
@@ -1134,7 +1137,7 @@ knitr::include_graphics("images/cost_ignorant_fft.png")
 
 <br4>
 
-<font size = 5>3. Minimise explicit feature costs.</font>
+<font size = 5>3. Minimise feature costs.</font>
 
 ]
 
@@ -1147,7 +1150,7 @@ knitr::include_graphics("images/cost_ignorant_fft.png")
 knitr::include_graphics("images/cost_minimising_fft.png")
 ```
 
-| | Ignore costs|Minimise |Change |
+| | Cost Ignorant|Cost Minimising |Change |
 |------:|:----:|:-----:|:----:|
 |     Cost / Patient|    $138| $2     |<font color="blue">-99%</font>    |
 |     Accuracy|    81%|77%     |<font color="red">-5%</font>    |
@@ -1206,20 +1209,48 @@ knitr::include_graphics("images/neuromuscular_fft_test.png")
 
 <br><br>
 
-### But how well can a simple FFT actually predict data?
-
-<br><br>
-
-### It couldn't possibly compete with the performance of a complex algorithm.
+### How well can a simple FFT actually predict data relative to a complex algorithm?
 
 ---
 
-# 10 datasets from UCI ML database,   50/50 CV,    100 Splits
+.pull-left5[
+
+## 10 datasets from UCI ML database
 
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/ten_datasets.png")
 ```
 
+<br>
+
+<font size = 5>Procedure: 100 50/50 Cross validation simulations</font>
+<br3>
+<font size = 5>Criterion: Balanced Accuracy</font>
+<br3>
+
+$\Large bacc = mean(sens, spec)$
+
+]
+
+.pull-right5[
+<br><br>
+
+| title| cases|features |base rate |
+|------:|----:|:-----|:----|
+|     arrhythmia|    68|280     |0.29    |
+|     audiology|    226|70     |0.10    |
+|     breast|    683|10     |0.35    |
+|     cmc|    1,473|10    |0.35    |
+|     credit|    666|16     |0.45    |
+|     dermatology|   358|35     |0.31    |
+|     heart|   303     |14    |0.46
+|     occupancy|   17,895|6     |0.21    |
+|     voting|   435     |17    |0.61 |
+|     yeast|   1,484     |19    |0.16 |
+
+
+]
+
 ---
 
 .pull-left5[
@@ -1231,31 +1262,19 @@ knitr::include_graphics("images/ten_datasets.png")
 
 <font size = 6>What will the median relative accuracy of FFTrees be to Random Forests?</font>
 
-]
+$\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
 
-.pull-right5[
+1. In the *worst* performing dataset
 
-]
+2. On *average*
 
----
-
-.pull-left5[
-
-# Make a Prediction!
-
-<br>
-<br>
-
-<font size = 6>What will the median relative accuracy of FFTrees be to Random Forests?</font>
+3. In the *best* performing dataset
 
 ]
 
 .pull-right5[
 
-```{r, out.width = "90%"}
-knitr::include_graphics("images/predict_relacc_1.png")
-```
-
+<iframe src="https://www.w3schools.com"></iframe>
 ]
 
 ---
@@ -1381,80 +1400,27 @@ knitr::include_graphics("images/predict_relacc_2.png")
 
 ---
 
-<br>
-<br>
-<br>
-<br>
+.pull-left6[
 
-# The Dark Secret at the heart of AI and big data
+### What I've learned from FFTrees
+
+- Simple models can be surprisingly effective, for both small and large datasets
+
+- People are are more likely to use decision tools that they can visualise and understand 
+
+- There is no one best model. The best model depends on the data and the needs of the decision maker.
+
+]
+
+.pull-right4[
 
 
 
----
-count: false
-
-<br>
-<br>
-<br>
-<br>
-
-# The Dark Secret at the heart of AI and big data
-
-## What happens when things go wrong?
+]
 
 ---
-count: false
 
 .pull-left5[
-
-]
-
-.pull-right5[
-
-<br><br>
-```{r, out.width = "70%", echo = FALSE}
-knitr::include_graphics("images/darksecretai.png")
-```
-
-]
-
-
-
----
-count: false
-
-.pull-left5[
-
-<br><br><br>
-
-> <font size=6>[W]hat if one day [an automated car] did something unexpected—crashed into a tree, or sat at a green light? [...] The system is so complicated that even the engineers who designed it may struggle to isolate the reason for any single action.</font>
-> <br>
-> <br>
-> <font size=5>~ Will Knight, MIT Technology Review, April 2017</font>
-
-
-]
-
-.pull-right5[
-
-<br><br>
-```{r, out.width = "70%", echo = FALSE}
-knitr::include_graphics("images/darksecretai.png")
-```
-
-]
-
-
----
-# Example of a changing environment
-
----
-
-
-### What' I've learned form FFTrees
-
-
----
 
 ## Next steps with FFTrees
 
@@ -1468,6 +1434,12 @@ knitr::include_graphics("images/darksecretai.png")
 
 - Write in C++
 - Allow for > 2 classes
+
+.pull-right5[
+
+
+
+]
 
 
 ---
