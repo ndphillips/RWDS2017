@@ -5,9 +5,9 @@ account: econpsychbasel
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 232754
-bundleId: 1063659
+bundleId: 1063701
 url: https://econpsychbasel.shinyapps.io/rwds_pred/
-when: 1510086385.63894
+when: 1510087886.13704
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: GNDRELJRKYEMQYJHUSJE.txt|ZUUKEBTQPKCTXZDZYAQU.txt

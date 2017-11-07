@@ -17,7 +17,7 @@ ui <- fluidPage(
    # Application title
    titlePanel(""),
    
-   plotOutput("distPlot"),
+   plotOutput("distPlot", width = "800px", height = "400px"),
    
    p("On average, across 10 datasets, how accurate will FFTrees be to Random Forests?"),
    
@@ -69,9 +69,8 @@ server <- function(input, output) {
 
     # Store as dataframe
     predictions_df <- do.call(what = rbind, args = predictions_ls)
-
+    
     output$distPlot <- renderPlot({
-      
       
       # predictions_df <- filter(predictions_df, grepl("test", id) == FALSE)
       

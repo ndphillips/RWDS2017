@@ -1103,16 +1103,19 @@ FFT (not yet public) makes decisions using ~3 features on average with performan
 ---
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-# I know what you're thinking...
+# I know what many of you are thinking...
 
 ---
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-# I know what you're thinking...
+# I know what many of you are thinking...
 
 &lt;br&gt;&lt;br&gt;
 
-### How well can a simple FFT actually predict data relative to a complex algorithm?
+&lt;h3&gt;What if I don't care about speed or efficiency?&lt;/h3&gt;
+&lt;br&gt;
+
+&lt;h3&gt;&lt;font color= "blue"&gt;How well can a simple FFT actually predict data relative to a complex algorithm?&lt;/font&gt;&lt;/h3&gt;
 
 ---
 
@@ -1154,28 +1157,33 @@ FFT (not yet public) makes decisions using ~3 features on average with performan
 
 ---
 
-.pull-left5[
+.pull-left4[
 
-# Make a Prediction!
-
-&lt;br&gt;
+## Make a Prediction!
 &lt;br&gt;
 
-&lt;font size = 6&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
+[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/)
+
+&lt;br&gt;
+
+&lt;font size = 5&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
 
 `\(\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}\)`
 
 1. In the *worst* performing dataset
 
-2. On *average*
+2. In the *best* performing dataset
 
-3. In the *best* performing dataset
+3. On *average*
+
 
 ]
 
 .pull-right5[
 
-&lt;iframe src="https://www.w3schools.com"&gt;&lt;/iframe&gt;
+
+
+&lt;iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"&gt;&lt;/iframe&gt;
 ]
 
 ---
@@ -1228,48 +1236,11 @@ count: false
 
 &lt;img src="images/simulation_accuracy_tree_2.png" width="100%" style="display: block; margin: auto;" /&gt;
 
-
-
 ---
 
-.pull-left5[
+## Make a Prediction!
 
-
-# Make a Prediction!
-
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;font size = 6&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
-
-
-]
-
-.pull-right5[
-
-&lt;img src="images/predict_relacc_1.png" width="90%" style="display: block; margin: auto;" /&gt;
-
-]
-
----
-count: false
-
-.pull-left5[
-
-&lt;br&gt;&lt;br&gt;
-
-&lt;br&gt;
-&lt;br&gt;
-
-# 98.8%
-
-]
-
-.pull-right5[
-
-&lt;img src="images/predict_relacc_2.png" width="90%" style="display: block; margin: auto;" /&gt;
-
-]
+&lt;iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/" width="1100" height="600"&gt;&lt;/iframe&gt;
 
 ---
 
@@ -1277,11 +1248,12 @@ count: false
 
 ### What I've learned from FFTrees
 
-- Simple models can be surprisingly effective, for both small and large datasets
+- Simple models can be surprisingly effective, for both small and large datasets.
+
+- There is no one best model. The best model depends on the data and the needs of the decision maker.
 
 - People are are more likely to use decision tools that they can visualise and understand 
 
-- There is no one best model. The best model depends on the data and the needs of the decision maker.
 
 ]
 
@@ -1299,14 +1271,18 @@ count: false
 
 ### High Priority
 
-- Automate crossvalidation to optimize parameters
+- Write in C++
+- Allow for &gt; 2 classes
 - Error monitoring and error diagnosis
-- When do FFTs work well and when not?
 
 ### Lower priority
 
-- Write in C++
-- Allow for &gt; 2 classes
+- When do FFTs work well and when not?
+- Automate crossvalidation to optimize parameters
+
+
+
+]
 
 .pull-right5[
 

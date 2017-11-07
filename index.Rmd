@@ -1211,16 +1211,19 @@ knitr::include_graphics("images/psychiatric_hospital.jpg")
 ---
 <br><br><br>
 
-# I know what you're thinking...
+# I know what many of you are thinking...
 
 ---
 <br><br><br>
 
-# I know what you're thinking...
+# I know what many of you are thinking...
 
 <br><br>
 
-### How well can a simple FFT actually predict data relative to a complex algorithm?
+<h3>What if I don't care about speed or efficiency?</h3>
+<br>
+
+<h3><font color= "blue">How well can a simple FFT actually predict data relative to a complex algorithm?</font></h3>
 
 ---
 
@@ -1264,28 +1267,33 @@ $\Large bacc = mean(sens, spec)$
 
 ---
 
-.pull-left5[
+.pull-left4[
 
-# Make a Prediction!
-
-<br>
+## Make a Prediction!
 <br>
 
-<font size = 6>What will the median relative accuracy of FFTrees be to Random Forests?</font>
+[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/)
+
+<br>
+
+<font size = 5>What will the median relative accuracy of FFTrees be to Random Forests?</font>
 
 $\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
 
 1. In the *worst* performing dataset
 
-2. On *average*
+2. In the *best* performing dataset
 
-3. In the *best* performing dataset
+3. On *average*
+
 
 ]
 
 .pull-right5[
 
-<iframe src="https://www.w3schools.com"></iframe>
+
+
+<iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"></iframe>
 ]
 
 ---
@@ -1360,52 +1368,11 @@ knitr::include_graphics("images/simulation_accuracy_tree_1.png")
 knitr::include_graphics("images/simulation_accuracy_tree_2.png")
 ```
 
-
-
 ---
 
-.pull-left5[
+## Make a Prediction!
 
-
-# Make a Prediction!
-
-<br>
-<br>
-
-<font size = 6>What will the median relative accuracy of FFTrees be to Random Forests?</font>
-
-
-]
-
-.pull-right5[
-
-```{r, out.width = "90%"}
-knitr::include_graphics("images/predict_relacc_1.png")
-```
-
-]
-
----
-count: false
-
-.pull-left5[
-
-<br><br>
-
-<br>
-<br>
-
-# 98.8%
-
-]
-
-.pull-right5[
-
-```{r, out.width = "90%"}
-knitr::include_graphics("images/predict_relacc_2.png")
-```
-
-]
+<iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/" width="1100" height="600"></iframe>
 
 ---
 
@@ -1413,11 +1380,12 @@ knitr::include_graphics("images/predict_relacc_2.png")
 
 ### What I've learned from FFTrees
 
-- Simple models can be surprisingly effective, for both small and large datasets
+- Simple models can be surprisingly effective, for both small and large datasets.
+
+- There is no one best model. The best model depends on the data and the needs of the decision maker.
 
 - People are are more likely to use decision tools that they can visualise and understand 
 
-- There is no one best model. The best model depends on the data and the needs of the decision maker.
 
 ]
 
@@ -1435,14 +1403,18 @@ knitr::include_graphics("images/predict_relacc_2.png")
 
 ### High Priority
 
-- Automate crossvalidation to optimize parameters
+- Write in C++
+- Allow for > 2 classes
 - Error monitoring and error diagnosis
-- When do FFTs work well and when not?
 
 ### Lower priority
 
-- Write in C++
-- Allow for > 2 classes
+- When do FFTs work well and when not?
+- Automate crossvalidation to optimize parameters
+
+
+
+]
 
 .pull-right5[
 
