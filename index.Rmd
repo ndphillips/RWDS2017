@@ -1369,10 +1369,19 @@ knitr::include_graphics("images/simulation_accuracy_tree_2.png")
 ```
 
 ---
-
+.pull-left3[
 ## Make a Prediction!
 
+Time to look at the results...
+
+
+]
+
+.pull-right7[
+
 <iframe src="https://econpsychbasel.shinyapps.io/rwds_results/" width="1100" height="600"></iframe>
+
+]
 
 ---
 
