@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Yihui Xie" />
     <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
+    <link href="libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan.css" type="text/css" />
   </head>
   <body>
@@ -23,19 +24,22 @@ class: title-slide-custom
 &lt;br&gt;
 
 &lt;font size = 6&gt; Dr. Nathaniel D. Phillips&lt;/font&gt;
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br3&gt;
+&lt;font size = 5&gt;&lt;i class="fa fa-globe"&gt;&lt;/i&gt;&lt;a href = "http://ndphillips.github.io"&gt;   http://ndphillips.github.io&lt;/a&gt;&lt;/font&gt;
+&lt;br&gt;&lt;br3&gt;
+&lt;font size = 5&gt;&lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;   Nathaniel.D.Phillips.is@gmail.com&lt;/font&gt;
+&lt;br&gt;&lt;br3&gt;
 
-&lt;font size = 5&gt;Roche, Real World Data Science (RWDS)&lt;/font&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;font size = 5&gt;13 November, 2017&lt;/font&gt;
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;font size = 5&gt; Slides: &lt;a href='http://ndphillips.github.io/RWDS2017'&gt;http://ndphillips.github.io/RWDS2017&lt;/a&gt;&lt;/font&gt;
+&lt;font size = 5&gt;&lt;i class="fa fa-tv"&gt;&lt;/i&gt;   Slides: &lt;a href='http://ndphillips.github.io/RWDS2017'&gt;http://ndphillips.github.io/RWDS2017&lt;/a&gt;&lt;/font&gt;
 
 
 &lt;br&gt;&lt;br&gt;
 
+
+&lt;font size = 5&gt;Roche, Real World Data Science (RWDS), 13 November, 2017&lt;/font&gt;
+
+
+&lt;br&gt;
 ]
 
 .pull-right35[
@@ -118,46 +122,261 @@ count: false
 
 &lt;img src="images/er_decision_8.png" width="100%" style="display: block; margin: auto;" /&gt;
 
----
-
-&lt;img src="images/green_mehr_fft.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-&lt;img src="images/whatis_fft_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+.pull-left45[
+
+&lt;br&gt;
+&lt;br&gt;
+### Why are doctor's decisions so bad?
+&lt;br&gt;
+
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Completely exhausted, overwhelmed&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Idiosyncratic, inconsistent decision rules.&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Extremely overconfident&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Defensive decision making&lt;/font&gt;
+
+
+]
+
+.pull-right45[
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/overconfidence_curve.gif" alt="&amp;lt;font size = 3&amp;gt;Source: Christensen-Szalanski and James Bushyhead (1981)&amp;lt;/font&amp;gt;" width="90%" /&gt;
+&lt;p class="caption"&gt;&lt;font size = 3&gt;Source: Christensen-Szalanski and James Bushyhead (1981)&lt;/font&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
 
 ---
-count: false
 
-&lt;img src="images/whatis_fft_2.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left5[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+###Solution
+&lt;font size = 5&gt;A Fast-and-Frugal decision Tree (FFT) developed by Green &amp; Mehr (1997)&lt;font&gt;
+&lt;br4&gt;
+
+### Results
+&lt;font size = 5&gt;Far fewer false-alarms and huge cost savings&lt;font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;Unlike complex rules (e.g.; regression), was readily accepted by physicians&lt;font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;Still used at the hospital today&lt;font&gt;
+&lt;br4&gt;
+
+]
+
+
+.pull-right5[
+
+
+&lt;img src="images/greenmehr_fft.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size = 3&gt;Source: Green &amp; Mehr. (1997). What alters physician's decisions to admit to the coronary care unit?&lt;/font&gt;
+
+]
+
 
 ---
-count: false
 
-&lt;img src="images/whatis_fft_3.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left5[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+## What is an FFT?
+&lt;br2&gt;
+&lt;font size=5&gt;A &lt;font color = "blue"&gt;Fast-and-Frugal Tree&lt;/font&gt; (FFT) is a highly restricted decision tree.&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size=5&gt;Each node in the tree must have exactly 2 branches, where 1 branch is an exit branch leading to a decision leaf.&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size=5&gt;The final node must have 2 exit branches.&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size = 3&gt;Martignon et al. (2003). Naive and yet enlightened: From natural frequencies to fast and frugal decision trees&lt;/font&gt;
+
+]
+
+
+.pull-right5[
+
+
+&lt;img src="images/blank_fft_B.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
 
 ---
-count: false
 
-&lt;img src="images/whatis_fft_4.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left5[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+## What is an FFT?
+&lt;br2&gt;
+&lt;font size=5&gt;A &lt;font color = "blue"&gt;Fast-and-Frugal Tree&lt;/font&gt; (FFT) is a highly restricted decision tree.&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size=5&gt;Each node in the tree must have exactly 2 branches, where 1 branch is an exit branch leading to a decision leaf.&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size=5&gt;The final node must have 2 exit branches.&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size = 3&gt;*Martignon et al. (2003). Naive and yet enlightened: From natural frequencies to fast and frugal decision trees*&lt;/font&gt;
+
+]
+
+
+.pull-right5[
+
+
+&lt;img src="images/fft_cartoon.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
 
 ---
-count: false
 
-&lt;img src="images/whatis_fft_5.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left35[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+## Benefits of FFTs
+&lt;br2&gt;
+&lt;font size = 5&gt;1. Transparent&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size = 5&gt;2. Focus (and ignore)&lt;/font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;3. Fast and efficient&lt;/font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;4. Difficult to overfit&lt;/font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;5. Easy to learn, communicate, and modify&lt;/font&gt;
+&lt;br4&gt;
+
+
+]
+
+
+.pull-right6[
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="images/algorithm_comparison.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
 
 ---
 
-&lt;img src="images/fft_examples.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left5[
+
+&lt;img src="images/fft_examples_images.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+.pull-right5[
+
+&lt;img src="images/blank_fft_B.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
 
 
 ---
 
-&lt;img src="images/fftrees_intro.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left5[
+
+&lt;img src="images/fft_examples_images_depression_focus.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+.pull-right5[
+
+### Depression FFT
+
+&lt;img src="images/depression_fft.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size = 3&gt;Jenny et al. (2013). Simple rules for detecting depression.&lt;/font&gt;
+
+
+]
+
+
 
 ---
-# Heart Disease
 
+.pull-left5[
+
+&lt;img src="images/fft_examples_images_military_focus.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+.pull-right5[
+
+### Miltary Checkpoint FFT
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="images/terrorism_fft.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size = 3&gt;Keller &amp; Katsikopoulos. (2016). On the role of psychological heuristics in operational research.&lt;/font&gt;
+
+
+]
+
+
+
+
+---
+
+
+.pull-left5[
+&lt;br&gt;&lt;br&gt;
+## How can I make an FFT?
+
+&lt;font size = 5&gt;No off-the-shelf method to create fast-and-frugal trees&lt;/font&gt;
+
+## FFTrees
+
+&lt;font size = 5&gt;An extremely simple tool that allows anyone to create FFTs&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size = 5&gt;Visualise decisions using icon arrays&lt;/font&gt;
+&lt;br4&gt;
+&lt;font size = 5&gt;Compare FFTs to other algorithms.&lt;/font&gt;
+
+]
+
+.pull-right5[
+
+&lt;img src="images/rlogo_and_shinyfftrees.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+## Ex) Heart Disease
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;&lt;b&gt;Data&lt;/b&gt; 150 Training cases, 153 test cases&lt;/font&gt;
+
+&lt;br&gt;
 
 | age| sex|cp | trestbps| chol| fbs|restecg     | thalach| exang| oldpeak|slope | ca|thal   | diagnosis|
 |---:|---:|:--|--------:|----:|---:|:-----------|-------:|-----:|-------:|:-----|--:|:------|---------:|
@@ -168,24 +387,33 @@ count: false
 |  41|   0|aa |      130|  204|   0|hypertrophy |     172|     0|     1.4|up    |  0|normal |         0|
 |  56|   1|aa |      120|  236|   0|normal      |     178|     0|     0.8|up    |  0|normal |         0|
 
+&lt;br&gt;
+
+&lt;font size = 5&gt;&lt;b&gt;Goal&lt;/b&gt; Predict binary criterion (diagnosis) from a set of 13 numeric and factor features&lt;/font&gt;
+&lt;br4&gt;
+
+
+&lt;font size = 3&gt;Source: UCI Machine Learning Database&lt;/font&gt;
+
+
 
 ---
-# 4 Steps to using FFTrees in R
+## 4 Steps to using FFTrees in R
 
 .pull-left15[
 &lt;br3&gt;&lt;br3&gt;
-
-
+&lt;br&gt;
+&lt;br&gt;
 &lt;font size = 5&gt;0.Install&lt;/font&gt;
-&lt;br&gt;&lt;br3&gt;
+&lt;br&gt;&lt;br&gt;
 
 &lt;font size = 5&gt;1. Load&lt;/font&gt;
 &lt;br&gt;
-&lt;br&gt;
+
 &lt;font size = 5&gt;2. Create&lt;/font&gt;
 &lt;br&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br4&gt;
 &lt;font size = 5&gt;3. Print&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
 
@@ -195,6 +423,8 @@ count: false
 ]
 
 .pull-right85[
+
+&lt;br&gt;
 
 
 ```r
@@ -219,12 +449,6 @@ plot(heart_FFT)
 ```
 
 ]
-
----
-## ShinyFFTrees: http://www.shinyfftrees.org
-
-&lt;iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"&gt;&lt;/iframe&gt;
-
 
 ---
 ## plot(heart_FFT, stats = FALSE)
@@ -289,10 +513,7 @@ count: false
 
 &lt;font size = 5&gt;Aggregate classification statistics&lt;/font&gt;
 
-
 ]
-
-
 
 ---
 count: false
@@ -316,8 +537,6 @@ count: false
 &lt;font size = 5&gt;Multiple FFTs spanning ROC space&lt;/font&gt;
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-
 
 ]
 
@@ -406,67 +625,486 @@ count: false
 &lt;br&gt;&lt;br&gt;
 ]
 
+---
+## ShinyFFTrees: http://www.shinyfftrees.org
 
+&lt;iframe src="https://econpsychbasel.shinyapps.io/shinyfftrees/" width="1100" height="500"&gt;&lt;/iframe&gt;
 
 ---
 
 
-### Additional Features
+.pull-left45[
 
----
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
 
-### Missing Values
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
 
----
+]
 
-### Cue costs
-
-
----
-
-### my.tree
-
-
----
+.pull-right45[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size = 5&gt;What is the best split for feature X?&lt;/font&gt;
 
-# I know what you're thinking...
+&lt;img src="images/threshold.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+
 
 ---
-.pull-left5[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-# I know what you're thinking...
+
+.pull-left45[
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;2. Rank order features by &lt;font color = 'red'&gt;accuracy&lt;/font&gt; and select top &lt;font color = 'red'&gt;M&lt;/font&gt; features.&lt;/font&gt;
+
+]
+
+
+.pull-right45[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size = 5&gt;What are the top M features?&lt;/font&gt;
+&lt;br&gt;
+&lt;img src="images/selectcues.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+
+---
+
+.pull-left45[
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
+
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;2. Rank order features by &lt;font color = 'red'&gt;accuracy&lt;/font&gt; and select top &lt;font color = 'red'&gt;M&lt;/font&gt; features.&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;3. Create `\((M - 1)^2\)` trees with all possible exit structures.&lt;/font&gt;
+
+
+]
+
+
+.pull-right45[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/fft_exits_heart_A.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+---
+count: false
+
+
+.pull-left45[
+
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
+
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;2. Rank order features by &lt;font color = 'red'&gt;accuracy&lt;/font&gt; and select top &lt;font color = 'red'&gt;M&lt;/font&gt; features.&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;3. Create `\((M - 1)^2\)` trees with all possible exit structures.&lt;/font&gt;
+
+]
+
+
+.pull-right45[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/fft_exits_heart_B.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+
+---
+count: false
+
+
+.pull-left45[
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
+
+
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+
+&lt;font size = 5&gt;2. Rank order features by &lt;font color = 'red'&gt;accuracy&lt;/font&gt; and select top &lt;font color = 'red'&gt;M&lt;/font&gt; features.&lt;/font&gt;
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;3. Create `\((M - 1)^2\)` trees with all possible exit structures.&lt;/font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;4. Select the tree that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+
+]
+
+
+.pull-right45[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/fft_exits_roc_A.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+count: false
+
+
+.pull-left45[
+
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
+
+
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+
+&lt;font size = 5&gt;2. Rank order features by &lt;font color = 'red'&gt;accuracy&lt;/font&gt; and select top &lt;font color = 'red'&gt;M&lt;/font&gt; features.&lt;/font&gt;
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;3. Create `\((M - 1)^2\)` trees with all possible exit structures.&lt;/font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;4. Select the tree that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+]
+
+
+.pull-right45[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/fft_exits_roc_B.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+count: false
+
+
+
+.pull-left45[
+
+&lt;br&gt;&lt;br&gt;
+## "Fan" Algorithm
+
+&lt;br&gt;
+&lt;font size = 5&gt;1. For each feature, calculate a threshold that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+&lt;br4&gt;
+
+
+
+&lt;font size = 5&gt;2. Rank order features by &lt;font color = 'red'&gt;accuracy&lt;/font&gt; and select top &lt;font color = 'red'&gt;M&lt;/font&gt; features.&lt;/font&gt;
+&lt;br4&gt;
+
+
+&lt;font size = 5&gt;3. Create `\((M - 1)^2\)` trees with all possible exit structures.&lt;/font&gt;
+&lt;br4&gt;
+
+&lt;font size = 5&gt;4. Select the tree that maximizes &lt;font color = 'red'&gt;accuracy&lt;/font&gt;&lt;/font&gt;
+
+]
+
+
+.pull-right45[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/fft_exits_roc_C.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+
+
+---
+
+
+.pull-left3[
+&lt;br&gt;&lt;br&gt;
+## Bonus Features
+&lt;br&gt;&lt;br&gt;
+
+
+]
+
+
+.pull-right6[
+
+]
+
+
+
+
+---
+
+
+.pull-left3[
+&lt;br&gt;&lt;br&gt;
+## Bonus Features
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;font size = 5&gt;1. Missing data? No problem.&lt;/font&gt;
+
+]
+
+
+.pull-right6[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/fft_missing.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+---
+
+.pull-left3[
+&lt;br&gt;&lt;br&gt;
+## Bonus Features
+
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;font size = 5&gt;1. Missing data? No problem.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;2. Impliment your own custom tree verbally.&lt;/font&gt;
+
+
+]
+
+.pull-right6[
+&lt;br&gt;
+&lt;img src="images/myfft_ss.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+
+
+---
+
+.pull-left3[
+
+&lt;br&gt;&lt;br&gt;
+## Bonus Features
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;font size = 5&gt;1. Missing data? No problem.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;2. Impliment your own custom tree verbally.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;3. Minimise feature costs.&lt;/font&gt;
+
+]
+
+
+.pull-right6[
+&lt;br&gt;&lt;br&gt;
+### Heart Disease feature costs
 
 &lt;br&gt;
 
+|     |age  |sex  |cp   |trestbps |chol |fbs  |restecg    |ca     |thal   |
+|:----|:----|:----|:----|:--------|:----|:----|:-----|:------|:------|
+|cost |$1 |$1 |$1 |$1     |$7 |$5 |$16  |$101 |$103 |
+
+
+&lt;font size = 5&gt; Create FFTs that &lt;i&gt;minimize&lt;/i&gt; costs&lt;/font&gt;
+&lt;br4&gt;
+
+
+```r
+# Minimise costs
+FFTrees(data = heart.train,
+        cost.cues = heart.cost,        # Feature costs
+        cost.outcomes = c(0, 1, 1, 0), # Outcome costs
+        goal = "cost")
+```
+
+
+
+
 ]
 
-.pull-right5[
-
-&lt;img src="images/cute_monster.jpg" width="90%" style="display: block; margin: auto;" /&gt;
-
-]
 
 ---
+
+.pull-left3[
+
+&lt;br&gt;&lt;br&gt;
+## Bonus Features
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;font size = 5&gt;1. Missing data? No problem.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;2. Impliment your own custom tree verbally.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;3. Minimise explicit feature costs.&lt;/font&gt;
+
+]
+
+
+.pull-right6[
+
+### Cost Ignorant FFT
+
+&lt;img src="images/cost_ignorant_fft.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+| | Ignore costs|Minimise |Change |
+|------:|:----:|:-----:|:----:|
+|     Cost / Patient|    $138|   &lt;font color = "gray"&gt;?&lt;/font&gt;   |   &lt;font color = "gray"&gt;?&lt;/font&gt; |
+|     Accuracy|    81%|   &lt;font color = "gray"&gt;?&lt;/font&gt;  | &lt;font color = "gray"&gt;?&lt;/font&gt;  |
+
+]
+
+
+
+
+---
+
+.pull-left3[
+
+&lt;br&gt;&lt;br&gt;
+## Bonus Features
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;font size = 5&gt;1. Missing data? No problem.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;2. Impliment your own custom tree verbally.&lt;/font&gt;
+
+&lt;br4&gt;
+
+&lt;font size = 5&gt;3. Minimise explicit feature costs.&lt;/font&gt;
+
+]
+
+
+.pull-right6[
+
+### Cost Minimising FFT
+
+&lt;img src="images/cost_minimising_fft.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+| | Ignore costs|Minimise |Change |
+|------:|:----:|:-----:|:----:|
+|     Cost / Patient|    $138| $2     |&lt;font color="blue"&gt;-99%&lt;/font&gt;    |
+|     Accuracy|    81%|77%     |&lt;font color="red"&gt;-5%&lt;/font&gt;    |
+
+]
+---
+## Applied projects
+
 .pull-left5[
+
+&lt;font size = 5&gt;Neuromuscular disorders in children&lt;/font&gt;
+
+*Which kind of neuromuscular disorder (neurogenic or myopathic) does a child have?*
+&lt;br3&gt;
+Data: 146 children from the Great Ormond Street Hospitcal in London
+&lt;br3&gt;
+
+FFT (see right) makes decisions after 2.1 features on average with ~ 85% accuracy
+
+&lt;font size = 5&gt;Psychiatric patient release&lt;/font&gt;
+
+*Which psychiatric patients are likely to be released within 5 years?*
+&lt;br3&gt;
+
+Data: Histories of ~1,100 patients at psychiatric clinic in Reichenau.
+&lt;br3&gt;
+
+FFT (currently classified) makes decisions after ~3 features on average (social situation at time of arrest is one critical factor).
+
+
+]
+
+
+
+.pull-right45[
+
+&lt;font size=5&gt;Neuromuscular Disorder FFT&lt;/font&gt;
+
+&lt;img src="images/neuromuscular_fft_test.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+
+---
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
 # I know what you're thinking...
 
-&lt;br&gt;
+---
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-### FFTs are cute, but they can't possibly compete with [insert your favorite ML algorithm] in raw predictive power.
+# I know what you're thinking...
 
-]
+&lt;br&gt;&lt;br&gt;
 
-.pull-right5[
+### But how well can a simple FFT actually predict data?
 
-&lt;img src="images/cute_monster.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;
 
-Source: Alex ‘alexmdc’ Solis
-
-]
+### It couldn't possibly compete with the performance of a complex algorithm.
 
 ---
 
@@ -673,42 +1311,7 @@ count: false
 ---
 
 
----
-&lt;img src="images/world_blank.png" width="85%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-
-&lt;img src="images/world_slowgains_1.png" width="85%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-
-&lt;img src="images/world_slowgains_2.png" width="85%" style="display: block; margin: auto;" /&gt;
-
-
----
-count: false
-
-&lt;img src="images/world_slowgains_3.png" width="85%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/world_fastgains_1.png" width="85%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/world_fastgains_2.png" width="85%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/world_fastgains_3.png" width="85%" style="display: block; margin: auto;" /&gt;
-
+### What' I've learned form FFTrees
 
 
 ---
@@ -727,44 +1330,42 @@ count: false
 - Allow for &gt; 2 classes
 
 
-
 ---
+
 class: title-slide-custom
 
-.pull-left55[
+.pull-left65[
 
-&lt;br&gt;
-# FFTrees
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-##A toolbox to create, visualise, and use fast-and-frugal decision trees
-&lt;br&gt;
-
-&lt;font size=5&gt;Nathaniel D. Phillips, University of Basel&lt;/font&gt;
-
-Hansjoerg Neth, Jan Woike, Wolfgang Gaissmaier
-
+## Creating transparent, powerful decision aids with FFTrees
 
 &lt;br&gt;
 
-&lt;font size=4&gt;Nathaniel.D.Phillips.is@gmail.com&lt;/font&gt;
+&lt;font size = 6&gt; Dr. Nathaniel D. Phillips&lt;/font&gt;
+&lt;br&gt;
+&lt;font size = 5&gt;&lt;a href = "http://ndphillips.github.io"&gt;http://ndphillips.github.io&lt;/a&gt;&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 
-&lt;br3&gt;
-&lt;font size=4&gt;Slides: &lt;a href="http://ndphillips.github.io/Informs2017"&gt;http://ndphillips.github.io/Informs2017&lt;/a&gt;&lt;/font&gt;
-&lt;br3&gt;
-&lt;font size=4&gt;ShinyFFTrees: &lt;a href="http://www.shinyfftrees.org"&gt;http://www.shinyfftrees.org&lt;/a&gt;&lt;/font&gt;
+&lt;font size = 5&gt;Roche, Real World Data Science (RWDS)&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 
-]
+&lt;font size = 5&gt;13 November, 2017&lt;/font&gt;
 
-.pull-right4[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size = 5&gt; Slides: &lt;a href='http://ndphillips.github.io/RWDS2017'&gt;http://ndphillips.github.io/RWDS2017&lt;/a&gt;&lt;/font&gt;
+
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;font size=4&gt;Phillips, N. D., Neth, H., Woike, J. K., &amp; Gaissmaier, W. (2017). FFTrees [...]. Judgment and Decision Making, 12(4).&lt;/font&gt;
-
-&lt;img src="images/manuscript_cover_short.png" width="100%" style="display: block; margin: auto;" /&gt;
-
 ]
 
+.pull-right35[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/heartfft.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
 
 
 ---
@@ -772,104 +1373,43 @@ Hansjoerg Neth, Jan Woike, Wolfgang Gaissmaier
 
 
 ---
+## Overfitting
 
+.pull-left5[
+
+&lt;font size=5&gt;Data = Underlying functional form (signal) + irreducible error (noise).&lt;/font&gt;
 &lt;br&gt;
 
-# Will you benefit from FFTrees?
+`\(\LARGE Y = f(x) + \epsilon\)`
 
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;font size=5&gt;A good model will try to approximate the true signal&lt;/font&gt;
+&lt;br&gt;
 
-&gt; # What kind of data world do you live in?
+`\(\LARGE E(Y - \widehat{Y})^2 = [f(X) - \widehat{f}(X)]^2 + Var(\epsilon)\)`
 
----
+&lt;br&gt;
+&lt;font size=5&gt;However, prediction error is a combination of bias *and* variance&lt;/font&gt;
+&lt;br&gt;
 
-&lt;img src="images/dataworld_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+`\(\large E(PredError) = Var(\hat{f}(x_{0})) + [Bias(\hat{f}(x_{0}))]^2 + Var(\epsilon)\)`
 
----
-count: false
-
-&lt;img src="images/dataworld_2.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_3.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_4.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_5.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_6.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_7.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_8.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_9.png" width="100%" style="display: block; margin: auto;" /&gt;
-
----
-count: false
-
-&lt;img src="images/dataworld_10.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-
-
----
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-# Additional Features
-
----
-
-&lt;img src="images/fftrees_bonus_all.png" width="90%" style="display: block; margin: auto;" /&gt;
-
-
----
-
-# Documentation
-
-.pull-left45[
-
-### Phillips et al. (2017). FFTrees: A toolbox to create...
-
-&lt;img src="images/manuscript_cover_short.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+*James et al. (2013). An Introduction to Statistical Learning*
 
 ]
 
-.pull-right45[
-### &lt;a href = "http://www.shinyfftrees.org"&gt;http://www.shinyfftrees.org&lt;/a&gt;
 
-&lt;img src="images/shinyfftrees_ss.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-right5[
+
+&lt;br&gt;
+&lt;br&gt;
+Given heavy irreducible noise, a simple model may outperform a complex one.
+&lt;br&gt;
+
+&lt;img src="images/overfitting_darts.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ]
-
----
-# Closing slide
-
-
----
-# To Do
-
-- Get shinyfftrees.org
--
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
