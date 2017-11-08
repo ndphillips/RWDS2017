@@ -377,7 +377,7 @@ knitr::include_graphics(c("images/fft_definition_examples.png"))
 <font size = 5>3. Fast and efficient</font>
 <br4>
 
-<font size = 5>4. Difficult to overfit</font>
+<font size = 5>4. Difficult to over-fit</font>
 <br4>
 
 <font size = 5>5. Easy to learn and communicate</font>
@@ -484,9 +484,9 @@ knitr::include_graphics(c("images/terrorism_fft.png"))
 
 ### Goal
 <br3>
-<font size = 5>Create a <font color = "blue">simple tool</font> that allows anyone to create and <font color = "blue">customise</font>FFTs with minimal programming</font>
+<font size = 5>Create a <font color = "blue">simple tool</font> that allows anyone to create and <font color = "blue">customize</font>FFTs with minimal programming</font>
 <br4>
-<font size = 5>Visualise tree decisions using <font color = "blue">icon arrays</font></font>
+<font size = 5>Visualize tree decisions using <font color = "blue">icon arrays</font></font>
 <br4>
 <font size = 5>Emphasize <font color = "blue">training versus prediction</font></font>
 <br4>
@@ -1078,7 +1078,7 @@ knitr::include_graphics("images/fft_missing.png")
 
 <br4>
 
-<font size = 5>2. Impliment your own custom tree verbally.</font>
+<font size = 5>2. Implement your own custom tree verbally.</font>
 
 
 ]
@@ -1108,11 +1108,11 @@ knitr::include_graphics("images/myfft_ss.png")
 
 <br4>
 
-<font size = 5>2. Impliment your own custom tree verbally.</font>
+<font size = 5>2. Implement your own custom tree verbally.</font>
 
 <br4>
 
-<font size = 5>3. Minimise feature costs.</font>
+<font size = 5>3. Minimize feature costs.</font>
 
 ]
 
@@ -1158,11 +1158,11 @@ FFTrees(data = heart.train,
 
 <br4>
 
-<font size = 5>2. Impliment your own custom tree verbally.</font>
+<font size = 5>2. Implement your own custom tree verbally.</font>
 
 <br4>
 
-<font size = 5>3. Minimise feature costs.</font>
+<font size = 5>3. Minimize feature costs.</font>
 
 ]
 
@@ -1175,7 +1175,7 @@ FFTrees(data = heart.train,
 knitr::include_graphics("images/cost_ignorant_fft.png")
 ```
 
-| | Cost Ignorant|Cost Minimising |Change |
+| | Cost Ignorant|Cost Minimizing |Change |
 |------:|:----:|:-----:|:----:|
 |     Cost / Patient|    $138|   <font color = "gray">?</font>   |   <font color = "gray">?</font> |
 |     Accuracy|    81%|   <font color = "gray">?</font>  | <font color = "gray">?</font>  |
@@ -1195,11 +1195,11 @@ knitr::include_graphics("images/cost_ignorant_fft.png")
 
 <br4>
 
-<font size = 5>2. Impliment your own custom tree verbally.</font>
+<font size = 5>2. Implement your own custom tree verbally.</font>
 
 <br4>
 
-<font size = 5>3. Minimise feature costs.</font>
+<font size = 5>3. Minimize feature costs.</font>
 
 ]
 
@@ -1212,7 +1212,7 @@ knitr::include_graphics("images/cost_ignorant_fft.png")
 knitr::include_graphics("images/cost_minimising_fft.png")
 ```
 
-| | Cost Ignorant|Cost Minimising |Change |
+| | Cost Ignorant|Cost Minimizing |Change |
 |------:|:----:|:-----:|:----:|
 |     Cost / Patient|    $138| $2     |<font color="blue">-99%</font>    |
 |     Accuracy|    81%|77%     |<font color="red">-5%</font>    |
@@ -1235,7 +1235,7 @@ knitr::include_graphics("images/cost_minimising_fft.png")
 Build a decision tree to aid the diagnosis of neuromuscular disorders in children
 <br3>
 <b>Data</b><br>
-146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* disorders
+146 children from the Great Ormond Street Hospital in London suspected of having either *neurogenic* or *myopathic* disorders
 <br3>
 <b>Result</b><br>
 FFT makes decisions after 2.1 features on average with ~ 85% accuracy
@@ -1260,7 +1260,7 @@ knitr::include_graphics("images/neuromuscular_fft_test.png")
 Build a decision tree to model the likelihood that psychiatric patients will be released from treatment within 5 years.
 <br3>
 <b>Data</b><br>
-Histories of ~1,100 patients at psychiatric clinic in Reichenau characterised by ~ 40 features (demographic and behavioral)
+Histories of ~1,100 patients at psychiatric clinic in Reichenau characterized by ~ 40 features (demographic and behavioral)
 <br3>
 <b>Result</b><br>
 FFT (not yet public) makes decisions using ~3 features (including social situation at time of intake) with performance similar to regression.
@@ -1545,7 +1545,7 @@ knitr::include_graphics("images/heart_fft_test.png")
 ### Programming
 
 - Write in C++
-- Automate crossvalidation to optimize parameters
+- Automate cross-validation to optimize parameters
 - Allow for > 2 classes
 - Error monitoring and error diagnosis
 
