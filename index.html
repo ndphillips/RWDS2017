@@ -271,7 +271,7 @@ count: false
 &lt;br&gt;
 
 ## Result
-&lt;font size = 5&gt;Far fewer false-alarms (same accuracy as HDPI)&lt;font&gt;
+&lt;font size = 5&gt;Far fewer false-alarms than doctors (same accuracy as HDPI)&lt;font&gt;
 &lt;br4&gt;
 
 &lt;font size = 5&gt;Unlike the HDPI, was understood and &lt;font color = "blue"&gt;actually used&lt;/font&gt; by physicians&lt;font&gt;
@@ -422,7 +422,7 @@ count: false
 
 ### Goal
 &lt;br3&gt;
-&lt;font size = 5&gt;Create a &lt;font color = "blue"&gt;simple tool&lt;/font&gt; that allows anyone to create FFTs with minimal programming&lt;/font&gt;
+&lt;font size = 5&gt;Create a &lt;font color = "blue"&gt;simple tool&lt;/font&gt; that allows anyone to create and &lt;font color = "blue"&gt;customise&lt;/font&gt;FFTs with minimal programming&lt;/font&gt;
 &lt;br4&gt;
 &lt;font size = 5&gt;Visualise tree decisions using &lt;font color = "blue"&gt;icon arrays&lt;/font&gt;&lt;/font&gt;
 &lt;br4&gt;
@@ -430,7 +430,7 @@ count: false
 &lt;br4&gt;
 &lt;font size = 5&gt;&lt;font color = "blue"&gt;Easily compare&lt;/font&gt; FFTs to other algorithms.&lt;/font&gt;
 
-## FFTrees
+## Result: FFTrees
 
 ]
 
@@ -1121,18 +1121,23 @@ FFTrees(data = heart.train,
 
 ]
 
+
+---
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+# 2 Applications of FFTrees
+
 ---
 
 .pull-left4[
 
-## Neuromuscular diseases in children
+## Neuromuscular disorders in children
 
 
 &lt;b&gt;Goal&lt;/b&gt;&lt;br&gt;
 Build a decision tree to aid the diagnosis of neuromuscular disorders in children
 &lt;br3&gt;
 &lt;b&gt;Data&lt;/b&gt;&lt;br&gt;
-146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* diseases.
+146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* disorders
 &lt;br3&gt;
 &lt;b&gt;Result&lt;/b&gt;&lt;br&gt;
 FFT makes decisions after 2.1 features on average with ~ 85% accuracy
@@ -1158,7 +1163,7 @@ Build a decision tree to model the likelihood that psychiatric patients will be 
 Histories of ~1,100 patients at psychiatric clinic in Reichenau characterised by ~ 40 features (demographic and behavioral)
 &lt;br3&gt;
 &lt;b&gt;Result&lt;/b&gt;&lt;br&gt;
-FFT (not yet public) makes decisions using ~3 features on average with performance similar to regression.
+FFT (not yet public) makes decisions using ~3 features (including social situation at time of intake) with performance similar to regression.
 
 ]
 
@@ -1186,7 +1191,7 @@ FFT (not yet public) makes decisions using ~3 features on average with performan
 &lt;h3&gt;What if I don't care about speed or efficiency?&lt;/h3&gt;
 &lt;br&gt;
 
-&lt;h3&gt;&lt;font color= "blue"&gt;How well can a simple FFT actually predict data relative to a complex algorithm?&lt;/font&gt;&lt;/h3&gt;
+&lt;h3&gt;How well can a simple FFT actually predict data relative to a complex algorithm?&lt;/h3&gt;
 
 ---
 
@@ -1304,11 +1309,11 @@ count: false
 
 ---
 
-&lt;img src="images/simulation_accuracy_tree_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/simulation_accuracy_tree_1.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-&lt;img src="images/simulation_accuracy_tree_2.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/simulation_accuracy_tree_2.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 .pull-left3[
@@ -1329,25 +1334,75 @@ Time to look at the results...
 
 .pull-left6[
 &lt;br&gt;&lt;br&gt;
-## What I've learned from FFTrees
+## What I've learned from creating FFTrees
 
 &lt;br&gt;
 
-&lt;font size = 5&gt;- Simple models can be surprisingly effective, for both small and large datasets.&lt;/font&gt;
-&lt;br3&gt;
-&lt;font size = 5&gt;- It is easy to be seduced by complex models that can fit any dataset&lt;/font&gt;
-&lt;br3&gt;
-&lt;font size = 5&gt;- People are are more likely to use decision tools that provide insight in addition to prediction&lt;/font&gt;
-&lt;br3&gt;
-&lt;font size = 5&gt;- There is no one "best" model. All models will fail. When they do, it's important to know why&lt;/font&gt;
+&lt;font size = 5&gt;Simple models can be surprisingly effective.&lt;/font&gt;
+&lt;br4&gt;
 
-]
+&lt;font size = 5&gt;It is easy to be seduced by a complex model that can fit almost any dataset, giving the illusion of certainty.&lt;/font&gt;
 
-.pull-right4[
+&lt;br4&gt;
+&lt;font size = 5&gt;There is no one "best" model. All models will fail. When they do, it's important to know why.&lt;/font&gt;
 
+&lt;br4&gt;
+&lt;font size = 5&gt;It can be worthwhile to trade a small amount of accuracy for a lot of insight.&lt;/font&gt;
 
 
 ]
+
+.pull-right35[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/darksecretai.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+---
+
+
+class: title-slide-custom
+
+.pull-left65[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+## Creating powerful, transparent decision aids with FFTrees
+
+&lt;br&gt;
+
+&lt;font size = 6&gt; Dr. Nathaniel D. Phillips&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;&lt;br3&gt;
+&lt;font size = 5&gt;&lt;i class="fa fa-globe"&gt;&lt;/i&gt;&lt;a href = "http://ndphillips.github.io"&gt;   http://ndphillips.github.io&lt;/a&gt;&lt;/font&gt;
+&lt;br&gt;&lt;br3&gt;
+&lt;font size = 5&gt;&lt;i class="fa fa-envelope-o"&gt;&lt;/i&gt;   Nathaniel.D.Phillips.is@gmail.com&lt;/font&gt;
+&lt;br&gt;&lt;br3&gt;
+
+&lt;font size = 5&gt;&lt;i class="fa fa-tv"&gt;&lt;/i&gt;   Slides: &lt;a href='http://ndphillips.github.io/RWDS2017'&gt;http://ndphillips.github.io/RWDS2017&lt;/a&gt;&lt;/font&gt;
+
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;font size = 5&gt;Roche, Real World Data Science (RWDS), 13 November, 2017&lt;/font&gt;
+
+&lt;br&gt;
+]
+
+.pull-right35[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/heart_fft_test.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+# Backup Slides
+
+
 
 ---
 
@@ -1358,9 +1413,9 @@ Time to look at the results...
 ### Programming
 
 - Write in C++
+- Automate crossvalidation to optimize parameters
 - Allow for &gt; 2 classes
 - Error monitoring and error diagnosis
-- Automate crossvalidation to optimize parameters
 
 ### Applications
 
@@ -1375,48 +1430,6 @@ Time to look at the results...
 
 
 ]
-
-
----
-
-class: title-slide-custom
-
-.pull-left65[
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-## Creating transparent, powerful decision aids with FFTrees
-
-&lt;br&gt;
-
-&lt;font size = 6&gt; Dr. Nathaniel D. Phillips&lt;/font&gt;
-&lt;br&gt;
-&lt;font size = 5&gt;&lt;a href = "http://ndphillips.github.io"&gt;http://ndphillips.github.io&lt;/a&gt;&lt;/font&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;font size = 5&gt;Roche, Real World Data Science (RWDS)&lt;/font&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;font size = 5&gt;13 November, 2017&lt;/font&gt;
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;font size = 5&gt; Slides: &lt;a href='http://ndphillips.github.io/RWDS2017'&gt;http://ndphillips.github.io/RWDS2017&lt;/a&gt;&lt;/font&gt;
-
-
-&lt;br&gt;&lt;br&gt;
-
-]
-
-.pull-right35[
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;img src="images/heartfft.png" width="100%" style="display: block; margin: auto;" /&gt;
-
-]
-
-
----
-# Backup Slides
 
 
 ---
@@ -1461,6 +1474,9 @@ Given heavy irreducible noise, a simple model may outperform a complex one.
 
 ---
 ## Icon Arrays
+
+
+&lt;img src="images/contraceptive_iconarray.png" width="80%" style="display: block; margin: auto;" /&gt;
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

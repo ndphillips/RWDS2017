@@ -315,7 +315,7 @@ knitr::include_graphics(c("images/HDPI.png"))
 <br>
 
 ## Result
-<font size = 5>Far fewer false-alarms (same accuracy as HDPI)<font>
+<font size = 5>Far fewer false-alarms than doctors (same accuracy as HDPI)<font>
 <br4>
 
 <font size = 5>Unlike the HDPI, was understood and <font color = "blue">actually used</font> by physicians<font>
@@ -484,7 +484,7 @@ knitr::include_graphics(c("images/terrorism_fft.png"))
 
 ### Goal
 <br3>
-<font size = 5>Create a <font color = "blue">simple tool</font> that allows anyone to create FFTs with minimal programming</font>
+<font size = 5>Create a <font color = "blue">simple tool</font> that allows anyone to create and <font color = "blue">customise</font>FFTs with minimal programming</font>
 <br4>
 <font size = 5>Visualise tree decisions using <font color = "blue">icon arrays</font></font>
 <br4>
@@ -492,7 +492,7 @@ knitr::include_graphics(c("images/terrorism_fft.png"))
 <br4>
 <font size = 5><font color = "blue">Easily compare</font> FFTs to other algorithms.</font>
 
-## FFTrees
+## Result: FFTrees
 
 ]
 
@@ -1219,18 +1219,23 @@ knitr::include_graphics("images/cost_minimising_fft.png")
 
 ]
 
+
+---
+<br><br><br><br>
+# 2 Applications of FFTrees
+
 ---
 
 .pull-left4[
 
-## Neuromuscular diseases in children
+## Neuromuscular disorders in children
 
 
 <b>Goal</b><br>
 Build a decision tree to aid the diagnosis of neuromuscular disorders in children
 <br3>
 <b>Data</b><br>
-146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* diseases.
+146 children from the Great Ormond Street Hospitcal in London suspected of having either *neurogenic* or *myopathic* disorders
 <br3>
 <b>Result</b><br>
 FFT makes decisions after 2.1 features on average with ~ 85% accuracy
@@ -1258,7 +1263,7 @@ Build a decision tree to model the likelihood that psychiatric patients will be 
 Histories of ~1,100 patients at psychiatric clinic in Reichenau characterised by ~ 40 features (demographic and behavioral)
 <br3>
 <b>Result</b><br>
-FFT (not yet public) makes decisions using ~3 features on average with performance similar to regression.
+FFT (not yet public) makes decisions using ~3 features (including social situation at time of intake) with performance similar to regression.
 
 ]
 
@@ -1288,7 +1293,7 @@ knitr::include_graphics("images/psychiatric_hospital.jpg")
 <h3>What if I don't care about speed or efficiency?</h3>
 <br>
 
-<h3><font color= "blue">How well can a simple FFT actually predict data relative to a complex algorithm?</font></h3>
+<h3>How well can a simple FFT actually predict data relative to a complex algorithm?</h3>
 
 ---
 
@@ -1428,13 +1433,13 @@ knitr::include_graphics("images/simulation_accuracy_6.png")
 
 ---
 
-```{r, out.width = "100%"}
+```{r, out.width = "80%"}
 knitr::include_graphics("images/simulation_accuracy_tree_1.png")
 ```
 
 ---
 
-```{r, out.width = "100%"}
+```{r, out.width = "80%"}
 knitr::include_graphics("images/simulation_accuracy_tree_2.png")
 ```
 
@@ -1457,25 +1462,79 @@ Time to look at the results...
 
 .pull-left6[
 <br><br>
-## What I've learned from FFTrees
+## What I've learned from creating FFTrees
 
 <br>
 
-<font size = 5>- Simple models can be surprisingly effective, for both small and large datasets.</font>
-<br3>
-<font size = 5>- It is easy to be seduced by complex models that can fit any dataset.</font>
-<br3>
-<font size = 5>- Don't focus only on prediction, also consider insight.</font>
-<br3>
-<font size = 5>- There is no one "best" model. All models will fail. When they do, it's important to know why.</font>
+<font size = 5>Simple models can be surprisingly effective.</font>
+<br4>
 
-]
+<font size = 5>It is easy to be seduced by a complex model that can fit almost any dataset, giving the illusion of certainty.</font>
 
-.pull-right4[
+<br4>
+<font size = 5>There is no one "best" model. All models will fail. When they do, it's important to know why.</font>
 
+<br4>
+<font size = 5>It can be worthwhile to trade a small amount of accuracy for a lot of insight.</font>
 
 
 ]
+
+.pull-right35[
+
+<br><br><br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics("images/darksecretai.png")
+```
+
+
+]
+
+
+---
+
+
+class: title-slide-custom
+
+.pull-left65[
+
+<br><br><br>
+
+## Creating powerful, transparent decision aids with FFTrees
+
+<br>
+
+<font size = 6> Dr. Nathaniel D. Phillips</font>
+<br><br><br3>
+<font size = 5><i class="fa fa-globe"></i><a href = "http://ndphillips.github.io">   http://ndphillips.github.io</a></font>
+<br><br3>
+<font size = 5><i class="fa fa-envelope-o"></i>   Nathaniel.D.Phillips.is@gmail.com</font>
+<br><br3>
+
+<font size = 5><i class="fa fa-tv"></i>   Slides: <a href='http://ndphillips.github.io/RWDS2017'>http://ndphillips.github.io/RWDS2017</a></font>
+
+
+<br><br>
+
+<font size = 5>Roche, Real World Data Science (RWDS), 13 November, 2017</font>
+
+<br>
+]
+
+.pull-right35[
+
+<br><br><br><br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics("images/heart_fft_test.png")
+```
+
+]
+
+
+---
+# Backup Slides
+
+
 
 ---
 
@@ -1486,9 +1545,9 @@ Time to look at the results...
 ### Programming
 
 - Write in C++
+- Automate crossvalidation to optimize parameters
 - Allow for > 2 classes
 - Error monitoring and error diagnosis
-- Automate crossvalidation to optimize parameters
 
 ### Applications
 
@@ -1505,50 +1564,6 @@ knitr::include_graphics("images/heart_fft_test.png")
 
 
 ]
-
-
----
-
-class: title-slide-custom
-
-.pull-left65[
-
-<br><br><br>
-
-## Creating transparent, powerful decision aids with FFTrees
-
-<br>
-
-<font size = 6> Dr. Nathaniel D. Phillips</font>
-<br>
-<font size = 5><a href = "http://ndphillips.github.io">http://ndphillips.github.io</a></font>
-<br><br>
-
-<font size = 5>Roche, Real World Data Science (RWDS)</font>
-<br><br>
-
-<font size = 5>13 November, 2017</font>
-
-<br><br><br><br>
-<font size = 5> Slides: <a href='http://ndphillips.github.io/RWDS2017'>http://ndphillips.github.io/RWDS2017</a></font>
-
-
-<br><br>
-
-]
-
-.pull-right35[
-
-<br><br><br><br>
-```{r, out.width = "100%"}
-knitr::include_graphics("images/heartfft.png")
-```
-
-]
-
-
----
-# Backup Slides
 
 
 ---
@@ -1596,5 +1611,9 @@ knitr::include_graphics("images/overfitting_darts.png")
 ---
 ## Icon Arrays
 
+
+```{r, out.width = "80%"}
+knitr::include_graphics("images/contraceptive_iconarray.png")
+```
 
 
