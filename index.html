@@ -19,7 +19,7 @@ class: title-slide-custom
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-## Creating transparent, powerful decision aids with FFTrees
+## Creating powerful, transparent decision aids with FFTrees
 
 &lt;br&gt;
 
@@ -53,7 +53,7 @@ class: title-slide-custom
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-# How can one make good decisions based on limited, complex, noisy information?
+# How can one make good decisions based on complex, noisy, limited information?
 
 ---
 
@@ -76,12 +76,27 @@ count: false
 
 ---
 
-&lt;img src="images/er_busy_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/cook_er_full.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 count: false
 
-&lt;img src="images/er_busy_2.png" width="100%" style="display: block; margin: auto;" /&gt;
+.pull-left5[
+
+&lt;img src="images/cook_er_half.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right45[
+
+&lt;br&gt;&lt;br&gt;
+
+&gt; &lt;font size = 5&gt;"As the city’s principal public hospital, Cook County was the place of last resort for the hundreds of thousands of Chicagoans without health insurance. Resources were stretched to the limit. The hospital’s cavernous wards were built for another century. There were no private rooms, and patients were separated by flimsy plywood dividers. [\...] Doctors once trained a homeless man to do routine lab tests because there was no one else available.”&lt;/font&gt;
+&gt; &lt;br&gt;&lt;br&gt;
+&gt; &lt;font size = 5&gt; ~ Malcolm Gladwell, Blink&lt;/font&gt;
+
+
+]
 
 ---
 
@@ -117,24 +132,75 @@ count: false
 
 &lt;img src="images/er_decision_7.png" width="100%" style="display: block; margin: auto;" /&gt;
 
----
-count: false
-
-&lt;img src="images/er_decision_8.png" width="100%" style="display: block; margin: auto;" /&gt;
-
 
 ---
-
-
 
 .pull-left45[
 
 &lt;br&gt;
-&lt;br&gt;
-## Why are doctor's decisions so poor?
+
+### How do doctors make decisions?
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Personal judgment from clinical experience&lt;/font&gt;
+
 &lt;br&gt;
 
+### Why so many errors?
 
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Lack of timely, accurate feedback&lt;/font&gt;
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Completely exhausted, overwhelmed&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Idiosyncratic, inconsistent decision rules.&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Defensive decision making&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Extreme overconfidence&lt;/font&gt;
+]
+
+.pull-right45[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/mri_diagnosis.jpg" alt="&amp;lt;font size = 3&amp;gt;Source: www.theconversation.com/&amp;lt;/font&amp;gt;" width="90%" /&gt;
+&lt;p class="caption"&gt;&lt;font size = 3&gt;Source: www.theconversation.com/&lt;/font&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
+---
+
+.pull-left45[
+
+&lt;br&gt;
+
+### How do doctors make decisions?
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Personal judgment from clinical experience&lt;/font&gt;
+
+&lt;br&gt;
+
+### Why so many errors?
+
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Lack of timely, accurate feedback&lt;/font&gt;
 &lt;br3&gt;
 
 &lt;font size = 5&gt;- Completely exhausted, overwhelmed&lt;/font&gt;
@@ -164,6 +230,35 @@ count: false
 
 ]
 
+---
+
+.pull-left5[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+### Early attempt: HDPI
+&lt;br3&gt;
+&lt;font size = 5&gt;- Heart Disease Predictive Instrument (HDPI), a logistic regression solution.&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Problem: Doctors don't use it.&lt;/font&gt;
+
+&lt;br3&gt;
+
+&lt;font size = 5&gt;- Why: Don't trust the tool, high confidence in individual decisions, and lack of time.&lt;/font&gt;
+
+]
+
+
+.pull-right5[
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="images/HDPI.png" alt="&amp;lt;font size = 3&amp;gt;Source: Pozen et al. (1984)&amp;lt;/font&amp;gt;" width="90%" /&gt;
+&lt;p class="caption"&gt;&lt;font size = 3&gt;Source: Pozen et al. (1984)&lt;/font&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+]
+
 
 ---
 
@@ -176,10 +271,10 @@ count: false
 &lt;br&gt;
 
 ## Result
-&lt;font size = 5&gt;Far fewer false-alarms and huge cost savings&lt;font&gt;
+&lt;font size = 5&gt;Far fewer false-alarms (same accuracy as HDPI)&lt;font&gt;
 &lt;br4&gt;
 
-&lt;font size = 5&gt;Unlike complex rules (e.g.; regression), was readily accepted by physicians&lt;font&gt;
+&lt;font size = 5&gt;Unlike the HDPI, was understood and &lt;font color = "blue"&gt;actually used&lt;/font&gt; by physicians&lt;font&gt;
 &lt;br4&gt;
 
 ]
@@ -197,33 +292,7 @@ count: false
 
 ---
 
-.pull-left5[
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-## What is an FFT?
-&lt;br2&gt;
-&lt;font size=5&gt;A &lt;font color = "blue"&gt;Fast-and-Frugal Tree&lt;/font&gt; (FFT) is a highly restricted decision tree.&lt;/font&gt;
-&lt;br4&gt;
-&lt;font size=5&gt;Each node in the tree must have exactly 2 branches, where 1 branch is an exit branch leading to a decision leaf.&lt;/font&gt;
-&lt;br4&gt;
-&lt;font size=5&gt;The final node must have 2 exit branches.&lt;/font&gt;
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;font size = 3&gt;Martignon et al. (2003). Naive and yet enlightened: From natural frequencies to fast and frugal decision trees&lt;/font&gt;
-
-]
-
-
-.pull-right5[
-
-
-&lt;img src="images/blank_fft_B.png" width="75%" style="display: block; margin: auto;" /&gt;
-
-]
-
-
----
-
-.pull-left5[
+.pull-left4[
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 ## What is an FFT?
@@ -239,10 +308,10 @@ count: false
 ]
 
 
-.pull-right5[
+.pull-right6[
 
-
-&lt;img src="images/fft_cartoon.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+&lt;img src="images/fft_definition_examples.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -263,9 +332,11 @@ count: false
 &lt;font size = 5&gt;4. Difficult to overfit&lt;/font&gt;
 &lt;br4&gt;
 
-&lt;font size = 5&gt;5. Easy to learn, communicate, and modify&lt;/font&gt;
+&lt;font size = 5&gt;5. Easy to learn and communicate&lt;/font&gt;
 &lt;br4&gt;
 
+&lt;font size = 5&gt;6. Easy to diagnose errors&lt;/font&gt;
+&lt;br4&gt;
 
 ]
 
@@ -1155,36 +1226,6 @@ FFT (not yet public) makes decisions using ~3 features on average with performan
 
 ]
 
----
-
-.pull-left4[
-
-## Make a Prediction!
-&lt;br&gt;
-
-[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/)
-
-&lt;br&gt;
-
-&lt;font size = 5&gt;What will the median relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
-
-`\(\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}\)`
-
-1. In the *worst* performing dataset
-
-2. In the *best* performing dataset
-
-3. On *average*
-
-
-]
-
-.pull-right5[
-
-
-
-&lt;iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"&gt;&lt;/iframe&gt;
-]
 
 ---
 
@@ -1203,6 +1244,39 @@ count: false
 ---
 
 &lt;img src="images/simulation_accuracy_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+.pull-left4[
+
+## Make a Prediction!
+&lt;br&gt;
+
+&lt;font size = 5&gt;What will the mean relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
+
+`\(\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}\)`
+&lt;br&gt;
+&gt;On average, across all 10 datasets, I am 90% confident that the average relative accuracy of FFTrees to random forests will be between X% and Y%*
+
+Go to
+[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/) and enter your prediction!
+
+]
+
+.pull-right5[
+
+
+
+&lt;iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"&gt;&lt;/iframe&gt;
+]
+
+
+---
+
+&lt;img src="images/simulation_accuracy_1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
 
 ---
 count: false
@@ -1238,7 +1312,7 @@ count: false
 
 ---
 .pull-left3[
-## Make a Prediction!
+## How accurate were your predictions?
 
 Time to look at the results...
 
@@ -1254,15 +1328,18 @@ Time to look at the results...
 ---
 
 .pull-left6[
+&lt;br&gt;&lt;br&gt;
+## What I've learned from FFTrees
 
-### What I've learned from FFTrees
+&lt;br&gt;
 
-- Simple models can be surprisingly effective, for both small and large datasets.
-
-- There is no one best model. The best model depends on the data and the needs of the decision maker.
-
-- People are are more likely to use decision tools that they can visualise and understand 
-
+&lt;font size = 5&gt;- Simple models can be surprisingly effective, for both small and large datasets.&lt;/font&gt;
+&lt;br3&gt;
+&lt;font size = 5&gt;- It is easy to be seduced by complex models that can fit any dataset&lt;/font&gt;
+&lt;br3&gt;
+&lt;font size = 5&gt;- People are are more likely to use decision tools that provide insight in addition to prediction&lt;/font&gt;
+&lt;br3&gt;
+&lt;font size = 5&gt;- There is no one "best" model. All models will fail. When they do, it's important to know why&lt;/font&gt;
 
 ]
 
@@ -1275,26 +1352,26 @@ Time to look at the results...
 ---
 
 .pull-left5[
-
-## Next steps with FFTrees
-
-### High Priority
+&lt;br&gt;&lt;br&gt;
+## Next steps
+&lt;br&gt;
+### Programming
 
 - Write in C++
 - Allow for &gt; 2 classes
 - Error monitoring and error diagnosis
-
-### Lower priority
-
-- When do FFTs work well and when not?
 - Automate crossvalidation to optimize parameters
 
+### Applications
 
+- When do FFTs work well and when not?
+- Compare other published regression techniques to FFTs
 
 ]
 
 .pull-right5[
-
+&lt;br&gt;&lt;br&gt;
+&lt;img src="images/heart_fft_test.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ]
@@ -1380,6 +1457,10 @@ Given heavy irreducible noise, a simple model may outperform a complex one.
 &lt;img src="images/overfitting_darts.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ]
+
+
+---
+## Icon Arrays
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

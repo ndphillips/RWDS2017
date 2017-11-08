@@ -38,7 +38,7 @@ class: title-slide-custom
 
 <br><br><br>
 
-## Creating transparent, powerful decision aids with FFTrees
+## Creating powerful, transparent decision aids with FFTrees
 
 <br>
 
@@ -74,7 +74,7 @@ knitr::include_graphics("images/heartfft.png")
 
 <br><br><br><br><br>
 
-# How can one make good decisions based on limited, complex, noisy information?
+# How can one make good decisions based on complex, noisy, limited information?
 
 ---
 
@@ -106,15 +106,30 @@ knitr::include_graphics(c("images/three_ex_4.png"))
 ---
 
 ```{r, out.width = "100%"}
-knitr::include_graphics(c("images/er_busy_1.png"))
+knitr::include_graphics(c("images/cook_er_full.png"))
 ```
 
 ---
 count: false
 
+.pull-left5[
+
 ```{r, out.width = "100%"}
-knitr::include_graphics(c("images/er_busy_2.png"))
+knitr::include_graphics(c("images/cook_er_half.png"))
 ```
+
+]
+
+.pull-right45[
+
+<br><br>
+
+> <font size = 5>"As the city’s principal public hospital, Cook County was the place of last resort for the hundreds of thousands of Chicagoans without health insurance. Resources were stretched to the limit. The hospital’s cavernous wards were built for another century. There were no private rooms, and patients were separated by flimsy plywood dividers. [\...] Doctors once trained a homeless man to do routine lab tests because there was no one else available.”</font>
+> <br><br>
+> <font size = 5> ~ Malcolm Gladwell, Blink</font>
+
+
+]
 
 ---
 
@@ -164,26 +179,74 @@ count: false
 knitr::include_graphics(c("images/er_decision_7.png"))
 ```
 
----
-count: false
-
-```{r, out.width = "100%"}
-knitr::include_graphics(c("images/er_decision_8.png"))
-```
-
 
 ---
-
-
 
 .pull-left45[
 
 <br>
-<br>
-## Why are doctor's decisions so poor?
+
+### How do doctors make decisions?
+
+<br3>
+
+<font size = 5>- Personal judgment from clinical experience</font>
+
 <br>
 
+### Why so many errors?
 
+
+<br3>
+
+<font size = 5>- Lack of timely, accurate feedback</font>
+<br3>
+
+<font size = 5>- Completely exhausted, overwhelmed</font>
+
+<br3>
+
+<font size = 5>- Idiosyncratic, inconsistent decision rules.</font>
+
+<br3>
+
+<font size = 5>- Defensive decision making</font>
+
+<br3>
+
+<font size = 5>- Extreme overconfidence</font>
+]
+
+.pull-right45[
+
+<br><br><br>
+
+```{r, out.width = "90%", fig.cap="<font size = 3>Source: www.theconversation.com/</font>"}
+knitr::include_graphics(c("images/mri_diagnosis.jpg"))
+```
+
+]
+
+---
+
+.pull-left45[
+
+<br>
+
+### How do doctors make decisions?
+
+<br3>
+
+<font size = 5>- Personal judgment from clinical experience</font>
+
+<br>
+
+### Why so many errors?
+
+
+<br3>
+
+<font size = 5>- Lack of timely, accurate feedback</font>
 <br3>
 
 <font size = 5>- Completely exhausted, overwhelmed</font>
@@ -212,6 +275,34 @@ knitr::include_graphics(c("images/overconfidence_curve.gif"))
 
 ]
 
+---
+
+.pull-left5[
+
+<br><br><br>
+### Early attempt: HDPI
+<br3>
+<font size = 5>- Heart Disease Predictive Instrument (HDPI), a logistic regression solution.</font>
+
+<br3>
+
+<font size = 5>- Problem: Doctors don't use it.</font>
+
+<br3>
+
+<font size = 5>- Why: Don't trust the tool, high confidence in individual decisions, and lack of time.</font>
+
+]
+
+
+.pull-right5[
+
+```{r, out.width = "90%", fig.cap="<font size = 3>Source: Pozen et al. (1984)</font>"}
+knitr::include_graphics(c("images/HDPI.png"))
+```
+
+]
+
 
 ---
 
@@ -224,10 +315,10 @@ knitr::include_graphics(c("images/overconfidence_curve.gif"))
 <br>
 
 ## Result
-<font size = 5>Far fewer false-alarms and huge cost savings<font>
+<font size = 5>Far fewer false-alarms (same accuracy as HDPI)<font>
 <br4>
 
-<font size = 5>Unlike complex rules (e.g.; regression), was readily accepted by physicians<font>
+<font size = 5>Unlike the HDPI, was understood and <font color = "blue">actually used</font> by physicians<font>
 <br4>
 
 ]
@@ -247,35 +338,7 @@ knitr::include_graphics(c("images/greenmehr_fft.png"))
 
 ---
 
-.pull-left5[
-
-<br><br><br>
-## What is an FFT?
-<br2>
-<font size=5>A <font color = "blue">Fast-and-Frugal Tree</font> (FFT) is a highly restricted decision tree.</font>
-<br4>
-<font size=5>Each node in the tree must have exactly 2 branches, where 1 branch is an exit branch leading to a decision leaf.</font>
-<br4>
-<font size=5>The final node must have 2 exit branches.</font>
-<br><br><br><br><br><br>
-<font size = 3>Martignon et al. (2003). Naive and yet enlightened: From natural frequencies to fast and frugal decision trees</font>
-
-]
-
-
-.pull-right5[
-
-
-```{r, out.width = "75%"}
-knitr::include_graphics(c("images/blank_fft_B.png"))
-```
-
-]
-
-
----
-
-.pull-left5[
+.pull-left4[
 
 <br><br><br>
 ## What is an FFT?
@@ -291,11 +354,11 @@ knitr::include_graphics(c("images/blank_fft_B.png"))
 ]
 
 
-.pull-right5[
+.pull-right6[
 
-
-```{r, out.width = "75%"}
-knitr::include_graphics(c("images/fft_cartoon.png"))
+<br>
+```{r, out.width = "100%"}
+knitr::include_graphics(c("images/fft_definition_examples.png"))
 ```
 
 ]
@@ -317,9 +380,11 @@ knitr::include_graphics(c("images/fft_cartoon.png"))
 <font size = 5>4. Difficult to overfit</font>
 <br4>
 
-<font size = 5>5. Easy to learn, communicate, and modify</font>
+<font size = 5>5. Easy to learn and communicate</font>
 <br4>
 
+<font size = 5>6. Easy to diagnose errors</font>
+<br4>
 
 ]
 
@@ -1265,36 +1330,6 @@ $\Large bacc = mean(sens, spec)$
 
 ]
 
----
-
-.pull-left4[
-
-## Make a Prediction!
-<br>
-
-[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/)
-
-<br>
-
-<font size = 5>What will the median relative accuracy of FFTrees be to Random Forests?</font>
-
-$\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
-
-1. In the *worst* performing dataset
-
-2. In the *best* performing dataset
-
-3. On *average*
-
-
-]
-
-.pull-right5[
-
-
-
-<iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"></iframe>
-]
 
 ---
 
@@ -1321,6 +1356,41 @@ knitr::include_graphics("images/simulation_speed_3.png")
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/simulation_accuracy_1.png")
 ```
+
+
+---
+
+.pull-left4[
+
+## Make a Prediction!
+<br>
+
+<font size = 5>What will the mean relative accuracy of FFTrees be to Random Forests?</font>
+
+$\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
+<br>
+>On average, across all 10 datasets, I am 90% confident that the average relative accuracy of FFTrees to random forests will be between X% and Y%*
+
+Go to
+[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/) and enter your prediction!
+
+]
+
+.pull-right5[
+
+
+
+<iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"></iframe>
+]
+
+
+---
+
+```{r, out.width = "100%"}
+knitr::include_graphics("images/simulation_accuracy_1.png")
+```
+
+
 
 ---
 count: false
@@ -1370,7 +1440,7 @@ knitr::include_graphics("images/simulation_accuracy_tree_2.png")
 
 ---
 .pull-left3[
-## Make a Prediction!
+## How accurate were your predictions?
 
 Time to look at the results...
 
@@ -1386,15 +1456,18 @@ Time to look at the results...
 ---
 
 .pull-left6[
+<br><br>
+## What I've learned from FFTrees
 
-### What I've learned from FFTrees
+<br>
 
-- Simple models can be surprisingly effective, for both small and large datasets.
-
-- There is no one best model. The best model depends on the data and the needs of the decision maker.
-
-- People are are more likely to use decision tools that they can visualise and understand 
-
+<font size = 5>- Simple models can be surprisingly effective, for both small and large datasets.</font>
+<br3>
+<font size = 5>- It is easy to be seduced by complex models that can fit any dataset</font>
+<br3>
+<font size = 5>- People are are more likely to use decision tools that provide insight in addition to prediction</font>
+<br3>
+<font size = 5>- There is no one "best" model. All models will fail. When they do, it's important to know why</font>
 
 ]
 
@@ -1407,26 +1480,28 @@ Time to look at the results...
 ---
 
 .pull-left5[
-
-## Next steps with FFTrees
-
-### High Priority
+<br><br>
+## Next steps
+<br>
+### Programming
 
 - Write in C++
 - Allow for > 2 classes
 - Error monitoring and error diagnosis
-
-### Lower priority
-
-- When do FFTs work well and when not?
 - Automate crossvalidation to optimize parameters
 
+### Applications
 
+- When do FFTs work well and when not?
+- Compare other published regression techniques to FFTs
 
 ]
 
 .pull-right5[
-
+<br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics("images/heart_fft_test.png")
+```
 
 
 ]
@@ -1516,6 +1591,10 @@ knitr::include_graphics("images/overfitting_darts.png")
 ```
 
 ]
+
+
+---
+## Icon Arrays
 
 
 
