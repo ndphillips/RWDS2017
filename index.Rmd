@@ -1463,11 +1463,11 @@ Time to look at the results...
 
 <font size = 5>- Simple models can be surprisingly effective, for both small and large datasets.</font>
 <br3>
-<font size = 5>- It is easy to be seduced by complex models that can fit any dataset</font>
+<font size = 5>- It is easy to be seduced by complex models that can fit any dataset.</font>
 <br3>
-<font size = 5>- People are are more likely to use decision tools that provide insight in addition to prediction</font>
+<font size = 5>- Don't focus only on prediction, also consider insight.</font>
 <br3>
-<font size = 5>- There is no one "best" model. All models will fail. When they do, it's important to know why</font>
+<font size = 5>- There is no one "best" model. All models will fail. When they do, it's important to know why.</font>
 
 ]
 
