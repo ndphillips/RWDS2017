@@ -1227,7 +1227,7 @@ knitr::include_graphics("images/cost_minimising_fft.png")
 ---
 
 .pull-left4[
-
+<br><br>
 ## Neuromuscular disorders in children
 
 
@@ -1253,7 +1253,7 @@ knitr::include_graphics("images/neuromuscular_fft_test.png")
 ---
 
 .pull-left5[
-
+<br><br><br>
 ## Psychiatric patient release
 
 <b>Goal</b><br>
@@ -1269,7 +1269,7 @@ FFT (not yet public) makes decisions using ~3 features (including social situati
 
 .pull-right45[
 
-<br><br>
+<br><br><br><br>
 ```{r}
 knitr::include_graphics("images/psychiatric_hospital.jpg")
 ```
