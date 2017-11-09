@@ -1271,7 +1271,7 @@ FFT (not yet public) makes decisions using ~3 features (including social situati
 
 <br><br><br><br>
 ```{r}
-knitr::include_graphics("images/psychiatric_hospital.jpg")
+knitr::include_graphics("images/psychiatric_hospital_B.jpg")
 ```
 
 ]
