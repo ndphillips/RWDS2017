@@ -53,7 +53,7 @@ class: title-slide-custom
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-# How can one make good decisions based on complex, noisy, limited information?
+# How can one make good decisions based on complex, noisy, limited information given limited resources?
 
 ---
 
@@ -673,7 +673,7 @@ count: false
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;font size = 5&gt;Tree #7 has a very low false-alarm rate but a huge number of misses&gt;&lt;/font&gt;
+&lt;font size = 5&gt;Tree #7 has a very low false-alarm rate but a huge number of misses&lt;/font&gt;
 
 &lt;br&gt;&lt;br&gt;
 
@@ -703,7 +703,7 @@ count: false
 
 ---
 
-.pull-left45[
+.pull-left35[
 
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
@@ -713,7 +713,7 @@ count: false
 
 ]
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;font size = 5&gt;What is the best split for feature X?&lt;/font&gt;
 
@@ -723,12 +723,10 @@ count: false
 ]
 
 
-
-
 ---
 
 
-.pull-left45[
+.pull-left35[
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
 &lt;br&gt;
@@ -741,7 +739,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;font size = 5&gt;What are the top M features?&lt;/font&gt;
 &lt;br&gt;
@@ -754,7 +752,7 @@ count: false
 
 ---
 
-.pull-left45[
+.pull-left35[
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
 
@@ -775,7 +773,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;img src="images/fft_exits_heart_A.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -787,7 +785,7 @@ count: false
 count: false
 
 
-.pull-left45[
+.pull-left35[
 
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
@@ -808,7 +806,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;img src="images/fft_exits_heart_B.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -821,7 +819,7 @@ count: false
 count: false
 
 
-.pull-left45[
+.pull-left35[
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
 
@@ -846,7 +844,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;img src="images/fft_exits_roc_A.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -857,7 +855,7 @@ count: false
 count: false
 
 
-.pull-left45[
+.pull-left35[
 
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
@@ -882,7 +880,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;img src="images/fft_exits_roc_B.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -894,7 +892,7 @@ count: false
 
 
 
-.pull-left45[
+.pull-left35[
 
 &lt;br&gt;&lt;br&gt;
 ## "Fan" Algorithm
@@ -918,7 +916,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;img src="images/fft_exits_roc_C.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -1177,21 +1175,52 @@ FFT (not yet public) makes decisions using ~3 features (including social situati
 
 
 ---
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-# I know what many of you are thinking...
-
----
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-# I know what many of you are thinking...
-
+.pull-left6[
 &lt;br&gt;&lt;br&gt;
 
-&lt;h3&gt;What if I don't care about speed or efficiency?&lt;/h3&gt;
-&lt;br&gt;
+### Recap
 
-&lt;h3&gt;How well can a simple FFT actually predict data relative to a complex algorithm?&lt;/h3&gt;
+1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.
+
+2. Fast-and-frugal trees are ideal candidates for these domains.
+
+3. FFTrees makes it easy for people to create, customise, and visualise them.
+
+
+
+
+]
+
+.pull-right4[
+
+
+]
+
+
+
+
+
+---
+.pull-left6[
+&lt;br&gt;&lt;br&gt;
+
+### Recap
+
+1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.
+
+2. Fast-and-frugal trees are ideal candidates for these domains.
+
+3. FFTrees makes it easy for people to create, customise, and visualise them.
+
+&lt;font color = "blue"&gt;&lt;h3&gt;But how well can a simple FFT actually predict data relative to a complex algorithm?&lt;/h3&gt;&lt;/font&gt;
+
+]
+
+.pull-right4[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/algorithm_comparison.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
 
 ---
 
@@ -1360,6 +1389,43 @@ Time to look at the results...
 
 ]
 
+
+
+---
+
+.pull-left5[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+## Acknowledgements
+
+
+### Funding
+
+&lt;font size = 5&gt;Swiss National Science Foundation (SNSF)&lt;/font&gt;
+&lt;br&gt;&lt;br4&gt;
+&lt;font size = 5&gt;University of Basel, University of Konstanz&lt;/font&gt;
+
+
+### Collaborators
+
+&lt;font size = 5&gt;Jan Woike, Max Planck Institute for Human Development, Berlin&lt;/font&gt;
+&lt;br&gt;&lt;br4&gt;
+&lt;font size = 5&gt;Hansjoerg Neth, University of Konstanz&lt;/font&gt;
+&lt;br&gt;&lt;br4&gt;
+
+&lt;font size = 5&gt;Wolfgang Gaissmaier, University of Konstanz&lt;/font&gt;
+
+
+
+
+]
+
+.pull-right5[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="images/acknowledgments.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
 
 ---
 

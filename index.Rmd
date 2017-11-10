@@ -74,7 +74,7 @@ knitr::include_graphics("images/heartfft.png")
 
 <br><br><br><br><br>
 
-# How can one make good decisions based on complex, noisy, limited information?
+# How can one make good decisions based on complex, noisy, limited information given limited resources?
 
 ---
 
@@ -748,7 +748,7 @@ knitr::include_graphics("images/heart_fft_test_tree7.png")
 
 <br><br>
 
-<font size = 5>Tree #7 has a very low false-alarm rate but a huge number of misses></font>
+<font size = 5>Tree #7 has a very low false-alarm rate but a huge number of misses</font>
 
 <br><br>
 
@@ -780,7 +780,7 @@ knitr::include_graphics("images/heart_fft_test_tree6.png")
 
 ---
 
-.pull-left45[
+.pull-left35[
 
 <br><br>
 ## "Fan" Algorithm
@@ -790,7 +790,7 @@ knitr::include_graphics("images/heart_fft_test_tree6.png")
 
 ]
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 <font size = 5>What is the best split for feature X?</font>
 
@@ -802,12 +802,10 @@ knitr::include_graphics("images/threshold.png")
 ]
 
 
-
-
 ---
 
 
-.pull-left45[
+.pull-left35[
 <br><br>
 ## "Fan" Algorithm
 <br>
@@ -820,7 +818,7 @@ knitr::include_graphics("images/threshold.png")
 ]
 
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 <font size = 5>What are the top M features?</font>
 <br>
@@ -835,7 +833,7 @@ knitr::include_graphics("images/selectcues.png")
 
 ---
 
-.pull-left45[
+.pull-left35[
 <br><br>
 ## "Fan" Algorithm
 
@@ -856,7 +854,7 @@ knitr::include_graphics("images/selectcues.png")
 ]
 
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/fft_exits_heart_A.png")
@@ -870,7 +868,7 @@ knitr::include_graphics("images/fft_exits_heart_A.png")
 count: false
 
 
-.pull-left45[
+.pull-left35[
 
 <br><br>
 ## "Fan" Algorithm
@@ -891,7 +889,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/fft_exits_heart_B.png")
@@ -906,7 +904,7 @@ knitr::include_graphics("images/fft_exits_heart_B.png")
 count: false
 
 
-.pull-left45[
+.pull-left35[
 <br><br>
 ## "Fan" Algorithm
 
@@ -931,7 +929,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/fft_exits_roc_A.png")
@@ -944,7 +942,7 @@ knitr::include_graphics("images/fft_exits_roc_A.png")
 count: false
 
 
-.pull-left45[
+.pull-left35[
 
 <br><br>
 ## "Fan" Algorithm
@@ -969,7 +967,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/fft_exits_roc_B.png")
@@ -983,7 +981,7 @@ count: false
 
 
 
-.pull-left45[
+.pull-left35[
 
 <br><br>
 ## "Fan" Algorithm
@@ -1007,7 +1005,7 @@ count: false
 ]
 
 
-.pull-right45[
+.pull-right55[
 <br><br><br>
 ```{r, out.width = "100%"}
 knitr::include_graphics("images/fft_exits_roc_C.png")
@@ -1279,21 +1277,54 @@ knitr::include_graphics("images/psychiatric_hospital_B.jpg")
 
 
 ---
-<br><br><br>
-
-# I know what many of you are thinking...
-
----
-<br><br><br>
-
-# I know what many of you are thinking...
-
+.pull-left6[
 <br><br>
 
-<h3>What if I don't care about speed or efficiency?</h3>
-<br>
+### Recap
 
-<h3>How well can a simple FFT actually predict data relative to a complex algorithm?</h3>
+1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.
+
+2. Fast-and-frugal trees are ideal candidates for these domains.
+
+3. FFTrees makes it easy for people to create, customise, and visualise them.
+
+
+
+
+]
+
+.pull-right4[
+
+
+]
+
+
+
+
+
+---
+.pull-left6[
+<br><br>
+
+### Recap
+
+1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.
+
+2. Fast-and-frugal trees are ideal candidates for these domains.
+
+3. FFTrees makes it easy for people to create, customise, and visualise them.
+
+<font color = "blue"><h3>But how well can a simple FFT actually predict data relative to a complex algorithm?</h3></font>
+
+]
+
+.pull-right4[
+<br><br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics(c("images/algorithm_comparison.png"))
+```
+
+]
 
 ---
 
@@ -1490,6 +1521,45 @@ knitr::include_graphics("images/darksecretai.png")
 
 ]
 
+
+
+---
+
+.pull-left5[
+
+<br><br><br>
+## Acknowledgements
+
+
+### Funding
+
+<font size = 5>Swiss National Science Foundation (SNSF)</font>
+<br><br4>
+<font size = 5>University of Basel, University of Konstanz</font>
+
+
+### Collaborators
+
+<font size = 5>Jan Woike, Max Planck Institute for Human Development, Berlin</font>
+<br><br4>
+<font size = 5>Hansjoerg Neth, University of Konstanz</font>
+<br><br4>
+
+<font size = 5>Wolfgang Gaissmaier, University of Konstanz</font>
+
+
+
+
+]
+
+.pull-right5[
+
+<br><br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics("images/acknowledgments.png")
+```
+
+]
 
 ---
 
