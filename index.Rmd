@@ -169,6 +169,13 @@ knitr::include_graphics(c("images/er_decision_5.png"))
 count: false
 
 ```{r, out.width = "100%"}
+knitr::include_graphics(c("images/er_decision_x.png"))
+```
+
+---
+count: false
+
+```{r, out.width = "100%"}
 knitr::include_graphics(c("images/er_decision_6.png"))
 ```
 
