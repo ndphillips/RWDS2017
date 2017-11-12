@@ -1282,24 +1282,23 @@ knitr::include_graphics("images/psychiatric_hospital_B.jpg")
 
 ### Recap
 
-1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.
+<font size = 5>1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.</font>
+<br4>
 
-2. Fast-and-frugal trees are ideal candidates for these domains.
+<font size = 5>2. Fast-and-frugal trees are ideal candidates for these domains.</font>
+<br4>
 
-3. FFTrees makes it easy for people to create, customise, and visualise them.
-
-
-
-
+<font size = 5>3. FFTrees makes it easy for people to create, customize, and visualize them.</font>
 ]
 
 .pull-right4[
 
+<br><br>
+```{r, out.width = "100%"}
+knitr::include_graphics("images/heartfft.png")
+```
 
 ]
-
-
-
 
 
 ---
@@ -1308,11 +1307,14 @@ knitr::include_graphics("images/psychiatric_hospital_B.jpg")
 
 ### Recap
 
-1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.
+<font size = 5>1. Many decision domains call for simple, efficient algorithms that people can quickly understand and use.</font>
+<br4>
 
-2. Fast-and-frugal trees are ideal candidates for these domains.
+<font size = 5>2. Fast-and-frugal trees are ideal candidates for these domains.</font>
+<br4>
 
-3. FFTrees makes it easy for people to create, customise, and visualise them.
+<font size = 5>3. FFTrees makes it easy for people to create, customize, and visualize them.</font>
+<br4>
 
 <font color = "blue"><h3>But how well can a simple FFT actually predict data relative to a complex algorithm?</h3></font>
 
