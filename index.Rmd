@@ -1410,6 +1410,9 @@ knitr::include_graphics("images/simulation_accuracy_1.png")
 ## Make a Prediction!
 <br>
 
+<font size = 5><a href="https://econpsychbasel.shinyapps.io/rwds_pred/">https://econpsychbasel.shinyapps.io/rwds_pred/</a></font>
+<br4>
+
 <font size = 5>What will the mean relative accuracy of FFTrees be to Random Forests?</font>
 
 $\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
@@ -1418,6 +1421,7 @@ $\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
 
 Go to
 [https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/) and enter your prediction!
+
 
 ]
 
