@@ -480,6 +480,34 @@ knitr::include_graphics(c("images/terrorism_fft.png"))
 
 
 
+
+---
+
+.pull-left35[
+
+### Lifecycle Management FFT
+
+
+*From http://lifecycle.roche.com/#/deliverable/pts* <br><br>
+
+The Probability of Technical Success (PTS) is the probability of successfully transitioning to the next phase of development. It defines the development risks to deliver the Target Product Profile (TPP).
+
+Each phase of a molecule's development plan is assigned a PTS value. As shown in the graphic, a Probability of Launch (PoL) is the product of the PTS at every stage gate.
+
+PTS helps decision makers assess the value of project opportunities in the context of the entire product portfolio.
+
+]
+
+.pull-right6[
+<br><br>
+```{r, out.width = "90%"}
+knitr::include_graphics("images/Probability of Technical Success.jpg")
+```
+
+]
+
+
+
 ---
 
 
@@ -1410,29 +1438,12 @@ knitr::include_graphics("images/simulation_accuracy_1.png")
 ## Make a Prediction!
 <br>
 
-<font size = 5><a href="https://econpsychbasel.shinyapps.io/rwds_pred/">https://econpsychbasel.shinyapps.io/rwds_pred/</a></font>
-<br4>
 
 <font size = 5>What will the mean relative accuracy of FFTrees be to Random Forests?</font>
 
 $\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}$
 <br>
 >On average, across all 10 datasets, I am 90% confident that the average relative accuracy of FFTrees to random forests will be between X% and Y%*
-
-Go to
-[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/) and enter your prediction!
-
-
-]
-
-.pull-right5[
-
-
-
-<iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"></iframe>
-]
-
-
 ---
 
 ```{r, out.width = "100%"}
@@ -1487,22 +1498,6 @@ knitr::include_graphics("images/simulation_accuracy_tree_1.png")
 knitr::include_graphics("images/simulation_accuracy_tree_2.png")
 ```
 
----
-.pull-left3[
-## How accurate were your predictions?
-
-Time to look at the results...
-
-
-]
-
-.pull-right7[
-
-<iframe src="https://econpsychbasel.shinyapps.io/rwds_results/" width="1100" height="600"></iframe>
-
-]
-
----
 
 .pull-left6[
 <br><br>

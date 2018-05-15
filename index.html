@@ -4,7 +4,7 @@
     <title>FFTrees</title>
     <meta charset="utf-8">
     <meta name="author" content="Yihui Xie" />
-    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan.css" type="text/css" />
   </head>
@@ -57,22 +57,22 @@ class: title-slide-custom
 
 ---
 
-&lt;img src="images/three_ex_1.png" width="1687" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/three_ex_1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 count: false
 
-&lt;img src="images/three_ex_2.png" width="1687" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/three_ex_2.png" style="display: block; margin: auto;" /&gt;
 
 ---
 count: false
 
-&lt;img src="images/three_ex_3.png" width="1687" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/three_ex_3.png" style="display: block; margin: auto;" /&gt;
 
 ---
 count: false
 
-&lt;img src="images/three_ex_4.png" width="1687" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/three_ex_4.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -413,6 +413,32 @@ count: false
 
 ]
 
+
+
+
+
+---
+
+.pull-left35[
+
+### Lifecycle Management FFT
+
+
+*From http://lifecycle.roche.com/#/deliverable/pts* &lt;br&gt;&lt;br&gt;
+
+The Probability of Technical Success (PTS) is the probability of successfully transitioning to the next phase of development. It defines the development risks to deliver the Target Product Profile (TPP).
+
+Each phase of a molecule's development plan is assigned a PTS value. As shown in the graphic, a Probability of Launch (PoL) is the product of the PTS at every stage gate.
+
+PTS helps decision makers assess the value of project opportunities in the context of the entire product portfolio.
+
+]
+
+.pull-right6[
+&lt;br&gt;&lt;br&gt;
+&lt;img src="images/Probability of Technical Success.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
 
 
 
@@ -1292,29 +1318,12 @@ count: false
 ## Make a Prediction!
 &lt;br&gt;
 
-&lt;font size = 5&gt;&lt;a href="https://econpsychbasel.shinyapps.io/rwds_pred/"&gt;https://econpsychbasel.shinyapps.io/rwds_pred/&lt;/a&gt;&lt;/font&gt;
-&lt;br4&gt;
 
 &lt;font size = 5&gt;What will the mean relative accuracy of FFTrees be to Random Forests?&lt;/font&gt;
 
 `\(\Large RelativeAccuracy = \frac{Accuracy(FFTrees)}{Accuracy(RF)}\)`
 &lt;br&gt;
 &gt;On average, across all 10 datasets, I am 90% confident that the average relative accuracy of FFTrees to random forests will be between X% and Y%*
-
-Go to
-[https://econpsychbasel.shinyapps.io/rwds_pred/](https://econpsychbasel.shinyapps.io/rwds_pred/) and enter your prediction!
-
-
-]
-
-.pull-right5[
-
-
-
-&lt;iframe src="https://econpsychbasel.shinyapps.io/rwds_pred/"  width="900" height="600"&gt;&lt;/iframe&gt;
-]
-
-
 ---
 
 &lt;img src="images/simulation_accuracy_1.png" width="100%" style="display: block; margin: auto;" /&gt;
@@ -1353,22 +1362,6 @@ count: false
 
 &lt;img src="images/simulation_accuracy_tree_2.png" width="80%" style="display: block; margin: auto;" /&gt;
 
----
-.pull-left3[
-## How accurate were your predictions?
-
-Time to look at the results...
-
-
-]
-
-.pull-right7[
-
-&lt;iframe src="https://econpsychbasel.shinyapps.io/rwds_results/" width="1100" height="600"&gt;&lt;/iframe&gt;
-
-]
-
----
 
 .pull-left6[
 &lt;br&gt;&lt;br&gt;
@@ -1560,8 +1553,15 @@ Given heavy irreducible noise, a simple model may outperform a complex one.
 "countIncrementalSlides": false,
 "ratio": "16:9"
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
